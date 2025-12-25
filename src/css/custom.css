@@ -162,17 +162,16 @@
 
 /* 3. ACTIVE STATE styling */
 .table-of-contents__link--active {
-  color: #ff5252 !important;
   font-weight: bold;
   border-left: 3px solid #ff5252;
   padding-left: 12px;
-  margin-left: -15px; /* Pull back to align with border */
+  margin-left: -5px; /* Pull back to align with border */
 }
 
 /* 4. Parent Heading Styling (Blue) */
 /* If a child (H3) is active, style the parent (H2) blue */
 .table-of-contents > li:has(ul > li > .table-of-contents__link--active) > .table-of-contents__link {
-  color: #3f51b5 !important;
+  color: #ff5252;
   font-weight: 700;
   opacity: 1;
 }
