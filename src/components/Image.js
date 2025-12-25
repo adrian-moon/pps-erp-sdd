@@ -8,13 +8,18 @@ export default function Image({src, caption, alt}) {
     <figure style={{ 
       margin: '20px auto',
       maxWidth: 'fit-content', 
-      border: 'none',
+      border: '1px solid #d0d7de',
       borderRadius: '8px',
-      backgroundColor: '#f5f6f8ff', /* The "Frame" color */
-      padding: '15px',           /* PADDING ALL AROUND */
-      display: 'table',          /* Ensures the box shrinks to the image width */
+      backgroundColor: '#f8f8f9ff', 
+      padding: '15px', 
+      display: 'table',
     }}>
-      <div style={{ backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', border: '1px solid #d0d7de' }}>
+      <div style={{ 
+        backgroundColor: '#fff', 
+        borderRadius: '4px', 
+        overflow: 'hidden', 
+        border: 'none'
+      }}>
         <img 
           src={processedPath} 
           alt={alt || caption || "Image"} 
@@ -27,7 +32,7 @@ export default function Image({src, caption, alt}) {
       </div>
       {caption && (
         <figcaption style={{ 
-          paddingTop: '12px',      /* Space between image and text */
+          paddingTop: '12px',
           fontSize: '0.85em',
           color: '#57606a',
           textAlign: 'center',
