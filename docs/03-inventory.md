@@ -44,7 +44,7 @@ Users may search for:
     - If I search 4258, It shows 4258 at the top and the rest of the numbers (4259,4260,4261…etc)
     </TabItem>
 
-    <TabItem value="desc" label="Description">
+    <TabItem value="desc" label="Item Description">
     When the user needs to search for numbers in the description, the search keyword needs to be put in quotations if starting with number.
     - RES 204 searches for description
     - 8604 searches for PN
@@ -60,7 +60,7 @@ Users may search for:
 </Tabs>
 
 
-### 3.2.2 Categories
+### 3.2.2 Item Categories
 
 There are a total of 8 main categories of items.  
 Items under these categories will be tracked on the global inventory table.  
@@ -70,35 +70,35 @@ Group 2 Categories are mostly procured.
 
 There are custom manufactured items such as skins, but are not systems or electronics.
 
-| Group 1 | Description |
-|----------|-------------|
+| Group 1 Category| Description |
+|-----------------|-------------|
 |Product   |Systems that belong to a particular product line|
 |Sensors   |All other sensor units|
 |PCB       |FPCB(A) and PCB(A)
 |Modules   |Subsystem Modules|
 
-| Group 2 | Description |
-|----------|-------------|
+| Group 2 Category | Description |
+|------------------|-------------|
 |Components|Electrical Components|
 |Parts     |Mechanical Parts|
 |Materials |Materials used in assembly|
 |Supplies  |Supplies used in assembly|
 
-#### 3.2.2.1 Category Filter Dropdown
+#### Category Filter Dropdown
 
 Users may use the Category Filter Dropdown to select any category and/or sub-category to show.
 
 
-![Category Filter] [category-filter]  
+![Category Filter](/assets/inventory/category-filter.png)
 
 1. Checking/unchecking the main category selects all sub-categories within that group
 1. When multiple random selections are made, show the number of selections
-1. When hovering over the drop box, the hoverbox will show all the selections in a vertical pop up
+1. When hovering over the drop box, the hoverbox shows all the selections in a vertical pop up
 
 ### 3.2.3 Filter
-![Inventory Filter] [inventory-filter]
+![Inventory Filter](/assets/inventory/inventory-filter.png)
 
-#### 3.2.3.1 Status Filter
+#### Status Filter
 
 | Status | Description |
 |----------|-------------|
@@ -106,7 +106,7 @@ Users may use the Category Filter Dropdown to select any category and/or sub-cat
 |Inactive |Obsolete or archived items|
 |Low Stock|Automatically updates when qty is below the threshold (See Item Detail)|
 
-#### 3.2.3.2 Location Filter
+#### Location Filter
 
 The location filter shows only items with at least a qty of 1+ for that location.  
 It also hides unselected locations from the inventory list.
@@ -141,15 +141,15 @@ This tag is different from Category: Product / TactileGlove)
 
 
 
-### 3.2.5 Filter Views and Groups (PHASE 2)
+### 3.2.5 Filter Views and Groups (phase 2)
 ![Filter Views and Groups] [filter-views-groups]
 
 There are 2 separate features
 
-#### 3.2.5.1 Filter Views
+#### Filter Views
 Users can select their own filter configuration and save it as a Filter View
 
-#### 3.2.5.2 Custom Groups
+#### Custom Groups
 You can either:
 Add an item with a PPS PN
 	or
@@ -163,10 +163,10 @@ This Custom Group (VN Office Supplies) is shared by the Vietnam team.
 They can add non-essential items as a Custom Item to simply track quantity.
 
 
-### 3.2.6 Stock Control
-When you hover over the item row, the stock control buttons appear.
+### 3.2.6 Adjust Stock Quantity
+When you hover over the item row, the stock adjust control buttons appear.
 
-![Stock Control] [stock-control-01]
+![Stock Control](/assets/inventory/stock-control-01.png)
 
 There are 3 different buttons:
 
@@ -181,12 +181,14 @@ When you click, the pop up window opens and users can set the:
 - Reason
 - Notes
 
-![Adjust Stock] [stock-control-02]
+![Adjust Stock](/assets/inventory/stock-control-02.png)
+
+**Location, Quantity,** and **Reason** are required.
 
 ## 3.3 Create New Item
-User can create a new item by clicking the [+Add] Button on the table view or on the side menu.
+User can create a new item by clicking the [+Add] Button on the **Inventory List**.
 
-![New Item] [new-item]
+![New Item](/assets/inventory/new-item.png)
 
 1. The next PN in the sequence is auto populated. This is not editable along with the Rev # and Status.
 2. All other fields are editable.
@@ -207,7 +209,7 @@ For example, for sensor design **PN3440** there are 4 different subparts all wit
 
 When user creates a new item and **Sensor** is selected for the Category, the checkbox options for additional Subpart configurations appears.
 
-![New Sensor] [new-sensor]
+![New Sensor](/assets/inventory/new-sensor.png)
 
 1. The default option has “PN” checked. This is the original PN without additional suffixes. 
 2. Users can select as many options as needed.
@@ -221,7 +223,7 @@ If you need to create additional subparts for existing PNs, you may do so in the
 
 ## 3.4 Item Detail View
 
-![Item Detail View] [item-detail]
+![Item Detail View](/assets/inventory/item-detail.png)
 
 ### 3.4.1 Overview
 
@@ -237,7 +239,7 @@ By clicking the item row on the inventory list, you can enter its item detail vi
 ### 3.4.2 Create Revision and Subparts
 For Items in Category Group 1, there is an [+Add] Button that opens up a menu for either 1 or 2 options depending on the category:
 
-![New Revision] [new-revision]
+![New Revision](/assets/inventory/new-revision.png)
 
 #### 3.4.2.1 Create New Revision
 
@@ -259,7 +261,7 @@ Once in Edit Mode, every field is editable except for the PN.
 
 ### 3.4.4 Stock Control Menu
 
-![Stock Menu] [stock-menu-detail]
+![Stock Menu](/assets/inventory/stock-menu-detail.png)
 
 The menu has 2 options:
 
@@ -267,13 +269,13 @@ The menu has 2 options:
     - Set threshold qty
     - Configure notification settings (phase 2)
 
-![Low Stock] [low-stock]
+![Low Stock](/assets/inventory/low-stock.png)
 
 
 - Set Unit Size
     - The default unit size is “ea” 
 
-![Unit Size] [unit-size]
+![Unit Size](/assets/inventory/unit-size.png)
 
 :::tip
     Click the [Show/Hide Unit] button to toggle the unit size display
@@ -284,11 +286,11 @@ The menu has 2 options:
 Click the empty gallery window to upload image files  
 (Accepted file types and max size?)
 
-![Image Gallery] [img-gallery-empty]
+![Image Gallery](/assets/inventory/img-gallery-empty.png)
 
 Once you upload images the **Image Gallery** will show
 
-![Image Gallery] [img-gallery-uploaded]
+![Image Gallery](/assets/inventory/img-gallery-uploaded.png)
 
 -  Click the upload icon to upload more photos
 -  Click the trashcan icon to delete current photo
@@ -309,7 +311,7 @@ Items in Category Group 2 excludes Drive, BOM, SN tabs.
 
 #### 3.4.6.1 Specifications
 
-![Specifications] [specifications]
+![Specifications](/assets/inventory/specifications.png)
 
 The specifications tab contains a table where users can add any of number of rows, and fill it the relevant specifications.
 
@@ -326,7 +328,7 @@ There are two sets of vendor information: main and alternative
 
 #### 3.4.6.2 Log
 
-![Log] [log]
+![Log]
 
 The log is a record of all actions performed regarding the item along with the user.
 Category = Reason in Stock Control (change “Reason” to “Category” in Stock Control?)

@@ -41,7 +41,7 @@
   font-size: 36px;
   font-weight: 600;
   font-family: 'gotham', 'Kanit', sans-serif;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -49,12 +49,14 @@
   font-size: 28px;
   font-weight: 550;
   font-family: 'gotham', 'Kanit', sans-serif;
+  margin-top: 3rem;
 }
 
 .markdown h4 {
   font-size: 22px;
   font-weight: 550;
   font-family: 'gotham', 'Kanit', sans-serif;
+  margin-top: 2rem;
 }
 
 .markdown h5 {
@@ -82,13 +84,21 @@
   text-decoration: underline;
 }
 
-.markdown img {
+/* .markdown img {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 2rem auto;
   padding: 1rem;
+} */
+
+hr {
+  background-color: #e0e3e7 !important; /* Change this hex to your preferred color */
+  height: 1px !important;               /* Controls thickness */
+  border: none !important;              /* Removes default inset border */
+  margin: 2rem 0 !important;            /* Adds space above and below the line */
+  opacity: 1 !important;                /* Ensures the color isn't washed out */
 }
 
 .menu__link {

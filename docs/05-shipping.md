@@ -3,12 +3,23 @@ sidebar_position: 5
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Image from '@site/src/components/Image';
 
 # 5. Shipping
 
 ## 5.1 Overview
 
 The **Shipment Module** is used to track all shipments sent and received by the company.
+
+
+
+### Features
+
+- Create shipments and track [**Status**](#522-shipment-status)
+- Create linked shipments from [**Purchase Requests**](./06-accounting.md#63-purchasing)
+- Add multiple Inventory and Non-Inventory Items
+- Assign project to each item using [**Multi Project**](#533-multi-project) Option.
+
 
 ---
 
@@ -34,7 +45,7 @@ There are 4 main categories of shipments
 
 ### 5.2.2 Shipment Status
 
-As far as the ERP and PPS is concerned, there are 5 statuses for shipments.
+As far as PPS and the ERP and are concerned, there are 5 statuses for shipments.
 
 | Status | Description |
 |----------|-------------|
@@ -91,43 +102,106 @@ The available options are:
 
 The drop-down options for **From** and **To** will change depending on the **Category**.
 
-#### Purchase
-- **From**: Vendors List
-- **To**: PPS Locations - Default **User Location** (Each user has a default location: LA, VN, UK, KR)
+<Tabs>
+  <TabItem value="purchase" label="Purchase" default>
+    |Location|Data|    
+    |--------|----|   
+    |From|Vendors List|
+    |To|PPS Locations|
+    
+    PPS Location fields automatically default to [**User Location**] setting
+  </TabItem>
+  <TabItem value="intra-pps" label="Intra PPS">
+    |Location|Data|    
+    |--------|----|   
+    |From|PPS Locations|
+    |To|PPS Locations|
 
-#### Intra PPS
+    PPS Location fields automatically default to [**User Location**] setting
+  </TabItem>
+  <TabItem value="customer" label="Customer">
+    Created from Project
+  </TabItem>
+    <TabItem value="RMA" label="RMA">
+    Created from Project
+  </TabItem>
+</Tabs>
+
+
+
+<!-- #### Intra PPS
 - **From**: PPS Locations
-- **To**: PPS Locations
+- **To**: PPS Locations -->
 
 #### Customer
 
-Customers and RMA shipments will later be launched from the **Project** Module
+Customers and RMA shipments will be created from the **Project** Module (TBD)
 
 
 
-### 5.3.3 Multi Project
+### 5.3.3 Shipment Project
 
-If the shipment is for a single project, simply search or select the project from the drop-down menu.  
+If the shipment is for a single project, the user can simply search or select the project from the drop-down menu.  
 If the shipment isn't specific to a project, you may also select from the other categories including **Inventory**, **Lab**...etc.
 
-![Project Selection](/assets/shipping/project-01.png)
+![Project Selection](/assets/shipping/project-selector.svg)
 
-*The Project textbox functions both as a searchbox and a drop-down list*
+:::info
+The Project textbox functions both as a searchbox and a drop-down menu
+:::
 
 
-If the shipment contains multiple items for different projects, enable the **Multiple Projects Option**.  
-There needs to be more than 1 item added to the **Item List** for the option to be enabled.
+#### Multi Project Option
+If the shipment contains multiple items for different projects, enable the **Multi Project Option**.  
+If the user adds more than 1 item to the **Item List**, the Multi Project Option switch is enabled.
 
-![Project Selection](/assets/shipping/project-02.png)
-![Project Selection](/assets/shipping/project-03.png)
+<Image 
+  src="/assets/shipping/multi-project-switch-off.svg"
+  alt="Multi Project"
+  caption="Multi Project Switch is not available (1 item)"
+/>
 
-Now users can assign **Projects** to each individual items.  
+<Image 
+  src="/assets/shipping/multi-project-switch-on.svg"
+  alt="Multi Project"
+  caption="Multi Project Switch is available (2 items)"
+/>
+
+<Image 
+  src="/assets/shipping/multi-project-switch-enabled.svg"
+  alt="Multi Project"
+  caption="Multi Project Switch is enabled"
+/>
+
+
+---
+When Multi Project Option is enabled, the main **Project** drop-down changes to Various.
+
+<Image 
+  src="/assets/shipping/multi-project-04.svg"
+  alt="Multi Project"
+  caption="Multi Project Switch is enabled"
+/>
+
+However, it displays as "Various" in this context, but the actual **Project** data should be an array of the different projects assigned to each item.
+
+
 
 ### 5.3.4 Shipment Item List
 
 You can add items by clicking the [+] icon on the bottom right corner of the **Item List** which opens up the **Add Items** window.
 
-![Add Items](/assets/shipping/item-list-blank.png)
+<Image 
+  src="/assets/shipping/item-list.svg"
+  alt="Item List"
+  caption=""
+/>
+
+<Image 
+  src="/assets/shipping/add-items.svg"
+  alt="Add Items"
+  caption=""
+/>
 
 ![Add Items](/assets/shipping/add-items.png)
 
