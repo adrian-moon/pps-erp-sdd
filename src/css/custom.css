@@ -35,7 +35,7 @@
 .markdown h1 {
   font-size: 48px;
   font-weight: 600;
-  font-family: 'gotham', sans-serif; /* Fallback added */
+  font-family: 'gotham', sans-serif;
 }
 
 .markdown h2 {
@@ -84,17 +84,48 @@
 .markdown img {
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 2rem auto;
   padding: 1rem;
 
 }
 
-/* =========================================
-   3. TABLE OF CONTENTS (Right Sidebar)
-   ========================================= */
-/* Docusaurus class for the TOC container is .table-of-contents */
+/* Increase Sidebar Menu Font Size */
+.menu__link {
+  font-family: 'gotham', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+/* Table of Contents (Right Sidebar) */
+
+/* Hide scrollbars in the TOC but allow scrolling if needed */
+.table-of-contents {
+  overflow-x: hidden; /* Hide horizontal bar */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.table-of-contents::-webkit-scrollbar {
+  display: none; /* For Chrome/Safari */
+}
+
+.table-of-contents__link {
+  font-family: 'gotham';
+  font-size: 1rem; /* Default is usually around 0.8rem */
+  margin-top: 5px; /* Adds a little space between links for readability */
+}
+
+/* Optional: Make the "Active" link in the TOC bold */
+.table-of-contents__link--active {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
 
 /* 1. Hide nested TOC levels (H3s) by default */
 /* We target the <ul> inside the top-level <li> */
