@@ -20,15 +20,17 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://adrian-moon.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/pps-erp-sdd/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'adrian-moon', // Usually your GitHub org/user name.
+  projectName: 'pps-erp-sdd', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
@@ -76,13 +78,7 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
+        
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -96,9 +92,10 @@ const config = {
           {
             title: 'Docs',
             items: [
+              // We removed the "Tutorial" link because /docs/intro doesn't exist anymore
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                 label: 'Home',
+                 to: '/',
               },
             ],
           },
@@ -113,22 +110,15 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
             ],
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // We removed the "Blog" link because blog is set to false
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/adrian-moon/pps-erp-sdd',
               },
             ],
           },
