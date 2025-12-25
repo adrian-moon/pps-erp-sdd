@@ -200,10 +200,8 @@ You can add items by clicking the [+] icon on the bottom right corner of the **I
 <Image 
   src="/assets/shipping/add-items.svg"
   alt="Add Items"
-  caption=""
+  caption="Add Items Pop-Up"
 />
-
-![Add Items](/assets/shipping/add-items.png)
 
 There are two different types of item you can add to a shipment.
 
@@ -215,12 +213,18 @@ There are two different types of item you can add to a shipment.
 2. **add custom item**
     - typing in the **Description**.
 
+You can add more rows by clickin either of the buttons at the top of the list.
+
 
 ### 5.3.5 Estimated Ship Date
 
 You can enter the **Estimated Ship Date** typing in the date, or opening up the date selector by clicking the icon. 
 
-![Shipment Date Table](/assets/shipping/shipment-date-table.png)
+<Image 
+  src="/assets/shipping/shipment-date-table.svg"
+  alt="Add Items"
+  caption="Shipment Date Table"
+/>
 
 
 
@@ -233,17 +237,40 @@ For example, **Purchase** shipments usually do not require any outgoing photos.
 
 #### Uploading Photos
 
-The individual item rows on the [Item List](#534-shipment-item-list) are selectable.  The first row is always selected first by default.
+When an item is added to the [Item List](#534-shipment-item-list), the Upload button for **Outgoing** photos appear.
 
-If the item already contains uploaded photos, the camera icon shows on the item row.
+The Item Selector card also appears in the **Photos** tab.
 
-![Item List](/assets/shipping/shipment-photo-01.png)
+<Image 
+  src="/assets/shipping/shipment-photo-01.svg"
+  alt="No Items"
+  caption="Initial"
+/>
 
-The **Photos** Tab shows the photos uploaded for the currently selected row.
+<Image 
+  src="/assets/shipping/shipment-photo-02.svg"
+  alt="Photo"
+  caption="Photos functionality enabled"
+/>
 
-You may upload photos for the selected Item by clicking the upload button. (Max? img size?)
+When photos are uploaded to an item, the camera icon shows on the item row to indicate which items have uploaded photos.
 
-You may delete or upload more photos as necessary.
+<Image 
+  src="/assets/shipping/shipment-photo-03.svg"
+  alt="Camera Icon"
+  caption="Camera Icon on item row for PN 8426 shows that there are photos uploaded for that item."
+/>
+
+
+(Max? img size?)
+
+#### Photo Navigation
+
+- You can use the arrow keys on the Item Selector Card to select the item to display - in the Photos tab.  
+- You can use the arrow keys on the Outgoing and Incoming photo cards to cycle throught the photos.
+- You can click on the current image to view magnified version.  
+- Click the upload button to upload more photos.  
+- Click the trash can icon to delete currently selected photo.
 
 ### 5.3.7 Notifications
 You can select which members or teams to notify using the checkbox menu.
@@ -251,15 +278,35 @@ You can select which members or teams to notify using the checkbox menu.
 
 ## 5.4 Shipment Detail
 
+Once a shipment has been submitted, its status either: **Pending** or **In Transit**.  
+In both cases, user can enter the Shipment Detail to view details and updates regarding the shipment.  
+In order to make changes to the information, the user needs to enter **Edit Mode**. 
+
 ### 5.4.1 Edit Mode
+
+#### Pending Shipments
+
+If the shipment is **Pending**, there is a Send button.
+
+#### Receiving Shipments
+
+For FedEx and DHL shipments, the shipment status will update to **Delivered**.  
+For all other shipments, the shipment status will stay as **In Transit** until it is received by user. 
 
 ### 5.4.2 Tabs
 
-#### 5.4.2.1 Billing
+#### Billing
 
-#### 5.4.2.2 Order
+Billing information for the shipping costs. 
+Should be in Project Details
 
-#### 5.4.2.3 Log
+#### Order
+
+Only for Linked Purchased Shipments.
+
+#### Log
+
+Shows all status updates, edits, and courier API updates.
 
 ## 5.5 Linked Shipments
 

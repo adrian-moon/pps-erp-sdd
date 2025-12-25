@@ -10,7 +10,7 @@ export default function Image({src, caption, alt}) {
       maxWidth: 'fit-content', 
       border: '1px solid #d0d7de',
       borderRadius: '8px',
-      backgroundColor: '#f8f8f9ff', 
+      backgroundColor: '#fafafdff', 
       padding: '15px', 
       display: 'table',
     }}>
