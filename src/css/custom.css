@@ -33,31 +33,31 @@
 /* Docusaurus wraps documentation content in the .markdown class */
 
 .markdown h1 {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 600;
   font-family: 'gotham', sans-serif; /* Fallback added */
 }
 
 .markdown h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 600;
   font-family: 'gotham', 'Kanit', sans-serif;
 }
 
 .markdown h3 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 550;
   font-family: 'gotham', 'Kanit', sans-serif;
 }
 
 .markdown h4 {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 550;
   font-family: 'gotham', 'Kanit', sans-serif;
 }
 
 .markdown h5 {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 600;
   font-family: 'gotham', 'Kanit', sans-serif;
   color: var(--ifm-color-primary);
@@ -79,6 +79,16 @@
 
 .markdown a {
   text-decoration: underline;
+}
+
+.markdown img {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem;
+
 }
 
 /* =========================================

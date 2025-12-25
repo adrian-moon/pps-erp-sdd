@@ -75,17 +75,18 @@ When creating a new shipment you must select the **Status**, **Category**, **Fro
 
 ### 5.3.1 New Shipment Status
 
+![New Shipment: Status](/assets/shipping/new-shipment-status.png)
+
 The default status is **Pending**.
 
 The available options are:
 1. Pending
 2. In Transit
 
-You can also input the Courier and Tracking # if available.
 
 ### 5.3.2 Shipment Category & Location
 
-The options for **From** and **To** will change depending on the **Category**.
+The drop-down options for **From** and **To** will change depending on the **Category**.
 
 #### Purchase
 - **From**: Vendors List
@@ -111,16 +112,15 @@ If the shipment isn't specific to a project, you may also select from the other 
 *The Project textbox functions both as a searchbox and a drop-down list*
 
 
-If the shipment contains multiple items for different projects, enable the **Multiple Projects Option**.
-
-*There needs to be more than 1 item added to the **Item List** for the option to be enabled.*
+If the shipment contains multiple items for different projects, enable the **Multiple Projects Option**.  
+There needs to be more than 1 item added to the **Item List** for the option to be enabled.
 
 ![Project Selection](/assets/shipping/project-02.png)
 ![Project Selection](/assets/shipping/project-03.png)
 
-3. Now you can assign **Projects** to each individual items as explained below.
+Now users can assign **Projects** to each individual items.  
 
-### 5.2.2 Shipment Item List
+### 5.3.4 Shipment Item List
 
 You can add items by clicking the [+] icon on the bottom right corner of the **Item List** which opens up the **Add Items** window.
 
@@ -128,7 +128,8 @@ You can add items by clicking the [+] icon on the bottom right corner of the **I
 
 ![Add Items](/assets/shipping/add-items.png)
 
-There are two different options for the type of item you can add to a shipment.
+There are two different types of item you can add to a shipment.
+
 1. **add PPS item**
     - typing in the **PN**  
     or
@@ -138,36 +139,28 @@ There are two different options for the type of item you can add to a shipment.
     - typing in the **Description**.
 
 
-### 5.2.3 Estimated Ship Date
+### 5.3.5 Estimated Ship Date
 
-You can enter the **Estimated Ship Date** typing in the date, or opening up the calendar by clicking the icon. 
+You can enter the **Estimated Ship Date** typing in the date, or opening up the date selector by clicking the icon. 
 
 ![Shipment Date Table](/assets/shipping/shipment-date-table.png)
 
 
 
-### 5.2.4 Shipment Photos
+### 5.3.6 Shipment Photos
 
 All outgoing and incoming shipments need to have photos uploaded. 
 
-Depending on the category, a shipment may not contain any photos.
-For example, incoming purchases typically do not require a photo, although they can be uploaded if necessary.
-
-The following categories require photos to be uploaded:
-
-- **Intra PPS** Shipments
-- Outgoing **Customer** Shipments
-- Outgoing **RMA** Shipments
-
-*Have customers take and upload photos for Incoming Customer and RMA Shipments?*
+Depending on the category, a shipment may not contain any outgoing photos.  
+For example, **Purchase** shipments usually do not require any outgoing photos.
 
 #### Uploading Photos
 
-The individual item rows on the [Item List](#522-shipment-item-list) are selectable.  The first row is always selected first by default.
+The individual item rows on the [Item List](#534-shipment-item-list) are selectable.  The first row is always selected first by default.
 
 If the item already contains uploaded photos, the camera icon shows on the item row.
 
-![Item List][shipment-photo-01]
+![Item List](/assets/shipping/shipment-photo-01.png)
 
 The **Photos** Tab shows the photos uploaded for the currently selected row.
 
@@ -175,23 +168,23 @@ You may upload photos for the selected Item by clicking the upload button. (Max?
 
 You may delete or upload more photos as necessary.
 
-### 5.2.4 Notifications
+### 5.3.7 Notifications
 You can select which members or teams to notify using the checkbox menu.
 
 
-## 5.3 Shipment Detail
+## 5.4 Shipment Detail
 
-### 5.3.1 Edit Mode
+### 5.4.1 Edit Mode
 
-### 5.3.2 Tabs
+### 5.4.2 Tabs
 
-#### 5.3.2.1 Billing
+#### 5.4.2.1 Billing
 
-#### 5.3.2.2 Order
+#### 5.4.2.2 Order
 
-#### 5.3.2.3 Log
+#### 5.4.2.3 Log
 
-## 5.4 Linked Shipments
+## 5.5 Linked Shipments
 
 Shipments created from other objects in the system will pull relevant information so that the data is linked.
 
