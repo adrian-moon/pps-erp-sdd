@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-inventory" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">3. Inventory | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://adrian-moon.github.io/pps-erp-sdd/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://adrian-moon.github.io/pps-erp-sdd/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://adrian-moon.github.io/pps-erp-sdd/inventory"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="3. Inventory | My Site"><meta data-rh="true" name="description" content="3.1 Overview"><meta data-rh="true" property="og:description" content="3.1 Overview"><link data-rh="true" rel="icon" href="/pps-erp-sdd/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://adrian-moon.github.io/pps-erp-sdd/inventory"><link data-rh="true" rel="alternate" href="https://adrian-moon.github.io/pps-erp-sdd/inventory" hreflang="en"><link data-rh="true" rel="alternate" href="https://adrian-moon.github.io/pps-erp-sdd/inventory" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"3. Inventory","item":"https://adrian-moon.github.io/pps-erp-sdd/inventory"}]}</script><link rel="stylesheet" href="/pps-erp-sdd/assets/css/styles.3212ef06.css">
+<script src="/pps-erp-sdd/assets/js/runtime~main.759593ed.js" defer="defer"></script>
+<script src="/pps-erp-sdd/assets/js/main.494af45c.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/pps-erp-sdd/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/pps-erp-sdd/"><div class="navbar__logo"><img src="/pps-erp-sdd/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/pps-erp-sdd/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">My Site</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/"><span title="1. Overview" class="linkLabel_WmDU">1. Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/projects"><span title="2. Projects" class="linkLabel_WmDU">2. Projects</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/pps-erp-sdd/inventory"><span title="3. Inventory" class="linkLabel_WmDU">3. Inventory</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/production"><span title="4. Production" class="linkLabel_WmDU">4. Production</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/shipping"><span title="5. Shipping" class="linkLabel_WmDU">5. Shipping</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/accounting"><span title="6. Accounting" class="linkLabel_WmDU">6. Accounting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/communications"><span title="7. Communications" class="linkLabel_WmDU">7. Communications</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pps-erp-sdd/sdd"><span title="sdd-backup(12-24-25)" class="linkLabel_WmDU">sdd-backup(12-24-25)</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/pps-erp-sdd/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">3. Inventory</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>3. Inventory</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-overview">3.1 Overview<a href="#31-overview" class="hash-link" aria-label="Direct link to 3.1 Overview" title="Direct link to 3.1 Overview" translate="no">​</a></h2>
+<p>The Inventory Module is used to track sensors, modules, components, and all parts, materials, supplies related to production. Monitor quantities, locations, lot tracking, and stock movements.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="311-features">3.1.1 Features<a href="#311-features" class="hash-link" aria-label="Direct link to 3.1.1 Features" title="Direct link to 3.1.1 Features" translate="no">​</a></h3>
+<ul>
+<li class="">Inventory view filter/search/sort</li>
+<li class="">Track stock by location</li>
+<li class="">Log stock movements</li>
+<li class="">Edit item detail</li>
+<li class="">Adjust stock quantities</li>
+<li class="">Set minimum stock levels and send notifications if qty drops below the threshold.</li>
+<li class="">Create filter views and custom groups</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="312-ui-map">3.1.2 UI Map<a href="#312-ui-map" class="hash-link" aria-label="Direct link to 3.1.2 UI Map" title="Direct link to 3.1.2 UI Map" translate="no">​</a></h3>
+<ul>
+<li class="">Inventory List</li>
+<li class="">Item Detail</li>
+<li class="">New Item</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="313-pps-pn-system">3.1.3 PPS PN System<a href="#313-pps-pn-system" class="hash-link" aria-label="Direct link to 3.1.3 PPS PN System" title="Direct link to 3.1.3 PPS PN System" translate="no">​</a></h3>
+<p>Every new item that requires inventory management is assigned a unique PN and added to the Documentations List.</p>
+<p>Currently there is one single PN for sensors, electrodes, and each sensor specification.<br>
+<!-- -->All PN numbers requiring separation will have their part numbers updated by being assigned a unique suffix.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-inventory-list-view">3.2 Inventory List View<a href="#32-inventory-list-view" class="hash-link" aria-label="Direct link to 3.2 Inventory List View" title="Direct link to 3.2 Inventory List View" translate="no">​</a></h2>
+<p>![Inventory List] [inventory-list]</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="321-search">3.2.1 Search<a href="#321-search" class="hash-link" aria-label="Direct link to 3.2.1 Search" title="Direct link to 3.2.1 Search" translate="no">​</a></h3>
+<p>Users may search for:</p>
+<ul>
+<li class=""><strong>Part Number:</strong> When exact part number is input and user presses Enter, go to item detail view.<!-- -->
+<ul>
+<li class="">Also don’t filter out the other items when searching by number.</li>
+<li class="">If I search 4258, It shows 4258 at the top and the rest of the numbers (4259,4260,4261…etc)</li>
+</ul>
+</li>
+<li class=""><strong>Description:</strong> When the user needs to search for numbers in the description, the search keyword needs to be put in quotations if starting with number.<!-- -->
+<ul>
+<li class="">RES 204 searches for description</li>
+<li class="">8604 searches for PN</li>
+<li class="">“8604 alternative” searches for description</li>
+<li class="">8604 alternative (how to disable?)</li>
+</ul>
+</li>
+<li class=""><strong>Notes</strong></li>
+<li class=""><strong>Comments</strong></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="322-categories">3.2.2 Categories<a href="#322-categories" class="hash-link" aria-label="Direct link to 3.2.2 Categories" title="Direct link to 3.2.2 Categories" translate="no">​</a></h3>
+<p>There are a total of 8 main categories of items.<br>
+<!-- -->Items under these categories will be tracked on the global inventory table.</p>
+<p>Group 1 Categories are items that are designed by PPS or custom manufactured.<br>
+<!-- -->Group 2 Categories are mostly procured.</p>
+<p>There are custom manufactured items such as skins, but are not systems or electronics.</p>
+<table><thead><tr><th>Group 1</th><th>Description</th></tr></thead><tbody><tr><td>Product</td><td>Systems that belong to a particular product line</td></tr><tr><td>Sensors</td><td>All other sensor units</td></tr><tr><td>PCB</td><td>FPCB(A) and PCB(A)</td></tr><tr><td>Modules</td><td>Subsystem Modules</td></tr></tbody></table>
+<table><thead><tr><th>Group 2</th><th>Description</th></tr></thead><tbody><tr><td>Components</td><td>Electrical Components</td></tr><tr><td>Parts</td><td>Mechanical Parts</td></tr><tr><td>Materials</td><td>Materials used in assembly</td></tr><tr><td>Supplies</td><td>Supplies used in assembly</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3221-category-filter-dropdown">3.2.2.1 Category Filter Dropdown<a href="#3221-category-filter-dropdown" class="hash-link" aria-label="Direct link to 3.2.2.1 Category Filter Dropdown" title="Direct link to 3.2.2.1 Category Filter Dropdown" translate="no">​</a></h4>
+<p>Users may use the Category Filter Dropdown to select any category and/or sub-category to show.</p>
+<p>![Category Filter] [category-filter]</p>
+<ol>
+<li class="">Checking/unchecking the main category selects all sub-categories within that group</li>
+<li class="">When multiple random selections are made, show the number of selections</li>
+<li class="">When hovering over the drop box, the hoverbox will show all the selections in a vertical pop up</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="323-filter">3.2.3 Filter<a href="#323-filter" class="hash-link" aria-label="Direct link to 3.2.3 Filter" title="Direct link to 3.2.3 Filter" translate="no">​</a></h3>
+<p>![Inventory Filter] [inventory-filter]</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3231-status-filter">3.2.3.1 Status Filter<a href="#3231-status-filter" class="hash-link" aria-label="Direct link to 3.2.3.1 Status Filter" title="Direct link to 3.2.3.1 Status Filter" translate="no">​</a></h4>
+<table><thead><tr><th>Status</th><th>Description</th></tr></thead><tbody><tr><td>Active</td><td>Items currently used in PPS operations</td></tr><tr><td>Inactive</td><td>Obsolete or archived items</td></tr><tr><td>Low Stock</td><td>Automatically updates when qty is below the threshold (See Item Detail)</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3232-location-filter">3.2.3.2 Location Filter<a href="#3232-location-filter" class="hash-link" aria-label="Direct link to 3.2.3.2 Location Filter" title="Direct link to 3.2.3.2 Location Filter" translate="no">​</a></h4>
+<p>The location filter shows only items with at least a qty of 1+ for that location.<br>
+<!-- -->It also hides unselected locations from the inventory list.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="324-tags">3.2.4 Tags<a href="#324-tags" class="hash-link" aria-label="Direct link to 3.2.4 Tags" title="Direct link to 3.2.4 Tags" translate="no">​</a></h3>
+<p>Tags are global groups for various categorizations and multiple tags can be assigned to a single item.<br>
+<!-- -->This tag is different from Category: Product / TactileGlove)</p>
+<p>!!! abstract &quot;Administrator&quot;</p>
+<p>Categories and tags are both configurable in the Administator Preferences</p>
+<p>!!! note</p>
+<p>Why we need tags: a TactileGlove system contains many different items and accessories. TactileGlove products (the actual gloves), plus modules, accessories…etc. Each of these items are set to their own category/sub-category. But need to be grouped together under a “TactileGlove” tag.</p>
+<table><thead><tr><th>Tags</th></tr></thead><tbody><tr><td>Critical</td></tr><tr><td>TactileHead</td></tr><tr><td>TactileGlove</td></tr><tr><td>FingerTPS</td></tr><tr><td>SureTouch</td></tr><tr><td>PKA</td></tr><tr><td>Heeluxe</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="325-filter-views-and-groups-phase-2">3.2.5 Filter Views and Groups (PHASE 2)<a href="#325-filter-views-and-groups-phase-2" class="hash-link" aria-label="Direct link to 3.2.5 Filter Views and Groups (PHASE 2)" title="Direct link to 3.2.5 Filter Views and Groups (PHASE 2)" translate="no">​</a></h3>
+<p>![Filter Views and Groups] [filter-views-groups]</p>
+<p>There are 2 separate features</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3251-filter-views">3.2.5.1 Filter Views<a href="#3251-filter-views" class="hash-link" aria-label="Direct link to 3.2.5.1 Filter Views" title="Direct link to 3.2.5.1 Filter Views" translate="no">​</a></h4>
+<p>Users can select their own filter configuration and save it as a Filter View</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3252-custom-groups">3.2.5.2 Custom Groups<a href="#3252-custom-groups" class="hash-link" aria-label="Direct link to 3.2.5.2 Custom Groups" title="Direct link to 3.2.5.2 Custom Groups" translate="no">​</a></h4>
+<p>You can either:
+Add an item with a PPS PN
+or
+Create a custom item</p>
+<p>Custom Item: Non-essential items created for a particular custom group.<br>
+<!-- -->Custom items are NOT assigned a PPS PN and do not go into the Master Inventory DB</p>
+<p>These are for local Custom Groups (i.e. VN Office Supplies)
+This Custom Group (VN Office Supplies) is shared by the Vietnam team.
+They can add non-essential items as a Custom Item to simply track quantity.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="326-stock-control">3.2.6 Stock Control<a href="#326-stock-control" class="hash-link" aria-label="Direct link to 3.2.6 Stock Control" title="Direct link to 3.2.6 Stock Control" translate="no">​</a></h3>
+<p>When you hover over the item row, the stock control buttons appear.</p>
+<p>![Stock Control] [stock-control-01]</p>
+<p>There are 3 different buttons:</p>
+<ul>
+<li class=""><strong>(+) add</strong> add quantity</li>
+<li class=""><strong>(-) remove</strong> remove quantity</li>
+<li class=""><strong>(=) set</strong> set quantity (if you enter 12, the qty is set to 12)</li>
+</ul>
+<p>When you click, the pop up window opens and users can set the:</p>
+<ul>
+<li class="">Location</li>
+<li class="">Qty</li>
+<li class="">Reason</li>
+<li class="">Notes</li>
+</ul>
+<p>![Adjust Stock] [stock-control-02]</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-create-new-item">3.3 Create New Item<a href="#33-create-new-item" class="hash-link" aria-label="Direct link to 3.3 Create New Item" title="Direct link to 3.3 Create New Item" translate="no">​</a></h2>
+<p>User can create a new item by clicking the [+Add] Button on the table view or on the side menu.</p>
+<p>![New Item] [new-item]</p>
+<ol>
+<li class="">The next PN in the sequence is auto populated. This is not editable along with the Rev # and Status.</li>
+<li class="">All other fields are editable.</li>
+<li class="">User clicks the [Save] button to complete creating the new item.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="331-create-new-sensor">3.3.1 Create New Sensor<a href="#331-create-new-sensor" class="hash-link" aria-label="Direct link to 3.3.1 Create New Sensor" title="Direct link to 3.3.1 Create New Sensor" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensor-subparts">Sensor Subparts<a href="#sensor-subparts" class="hash-link" aria-label="Direct link to Sensor Subparts" title="Direct link to Sensor Subparts" translate="no">​</a></h4>
+<p>Sensor designs with different configurations are assigned the same PN, but differentiated by suffixes and will be referred to as <strong>subparts</strong>.</p>
+<p>For example, for sensor design <strong>PN3440</strong> there are 4 different subparts all with a unique suffix:</p>
+<ul>
+<li class="">3440-80</li>
+<li class="">3440-60</li>
+<li class="">3440-40</li>
+<li class="">3440-NIBS</li>
+</ul>
+<p>When user creates a new item and <strong>Sensor</strong> is selected for the Category, the checkbox options for additional Subpart configurations appears.</p>
+<p>![New Sensor] [new-sensor]</p>
+<ol>
+<li class="">The default option has “PN” checked. This is the original PN without additional suffixes.</li>
+<li class="">Users can select as many options as needed.</li>
+<li class="">All of the information filled in will be duplicated to all of the other subparts.</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="creating-additional-subparts">Creating additional Subparts<a href="#creating-additional-subparts" class="hash-link" aria-label="Direct link to Creating additional Subparts" title="Direct link to Creating additional Subparts" translate="no">​</a></h4>
+<p>If you need to create additional subparts for existing PNs, you may do so in the particular PN item detail view (see below)</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-item-detail-view">3.4 Item Detail View<a href="#34-item-detail-view" class="hash-link" aria-label="Direct link to 3.4 Item Detail View" title="Direct link to 3.4 Item Detail View" translate="no">​</a></h2>
+<p>![Item Detail View] [item-detail]</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="341-overview">3.4.1 Overview<a href="#341-overview" class="hash-link" aria-label="Direct link to 3.4.1 Overview" title="Direct link to 3.4.1 Overview" translate="no">​</a></h3>
+<p>The item detail view contains all the information regarding that PN.<br>
+<!-- -->By clicking the item row on the inventory list, you can enter its item detail view to see and edit the inventory item information.</p>
+<p>!!! info</p>
+<p>All fields are copied to clipboard when clicked (change cursor and show tooltip) except for when user enters <strong>edit mode</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="342-create-revision-and-subparts">3.4.2 Create Revision and Subparts<a href="#342-create-revision-and-subparts" class="hash-link" aria-label="Direct link to 3.4.2 Create Revision and Subparts" title="Direct link to 3.4.2 Create Revision and Subparts" translate="no">​</a></h3>
+<p>For Items in Category Group 1, there is an [+Add] Button that opens up a menu for either 1 or 2 options depending on the category:</p>
+<p>![New Revision] [new-revision]</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3421-create-new-revision">3.4.2.1 Create New Revision<a href="#3421-create-new-revision" class="hash-link" aria-label="Direct link to 3.4.2.1 Create New Revision" title="Direct link to 3.4.2.1 Create New Revision" translate="no">​</a></h4>
+<p>When <strong>Create New Revision</strong> is selected, the next revision in sequence is automatically created and all data is copied over from the previous revision.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3422-create-new-subparts">3.4.2.2 Create New Subparts<a href="#3422-create-new-subparts" class="hash-link" aria-label="Direct link to 3.4.2.2 Create New Subparts" title="Direct link to 3.4.2.2 Create New Subparts" translate="no">​</a></h4>
+<p>Items under <strong>Sensor</strong> category show an additional option for <strong>Create New Subparts</strong>.
+The same checkbox options from Create New Sensor appear.
+For already existing PNs the text is greyed out and checkbox option is disabled.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="343-edit-mode">3.4.3 Edit Mode<a href="#343-edit-mode" class="hash-link" aria-label="Direct link to 3.4.3 Edit Mode" title="Direct link to 3.4.3 Edit Mode" translate="no">​</a></h3>
+<p>Users cannot edit anything unless Edit Mode is enabled by pressing the button on the top right corner.
+Once in Edit Mode, every field is editable except for the PN.</p>
+<p>!!! info</p>
+<p>Stock qty control/menu options and image gallery are fully editable and functional whether in Edit Mode or not.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="344-stock-control-menu">3.4.4 Stock Control Menu<a href="#344-stock-control-menu" class="hash-link" aria-label="Direct link to 3.4.4 Stock Control Menu" title="Direct link to 3.4.4 Stock Control Menu" translate="no">​</a></h3>
+<p>![Stock Menu] [stock-menu-detail]</p>
+<p>The menu has 2 options:</p>
+<ul>
+<li class="">Configure Low Stock<!-- -->
+<ul>
+<li class="">Set threshold qty</li>
+<li class="">Configure notification settings (phase 2)</li>
+</ul>
+</li>
+</ul>
+<p>![Low Stock] [low-stock]</p>
+<ul>
+<li class="">Set Unit Size<!-- -->
+<ul>
+<li class="">The default unit size is “ea”</li>
+</ul>
+</li>
+</ul>
+<p>![Unit Size] [unit-size]</p>
+<p>!!! tip</p>
+<p>Click the [Show/Hide Unit] button to toggle the unit size display</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="345-image-gallery">3.4.5 Image Gallery<a href="#345-image-gallery" class="hash-link" aria-label="Direct link to 3.4.5 Image Gallery" title="Direct link to 3.4.5 Image Gallery" translate="no">​</a></h3>
+<p>Click the empty gallery window to upload image files<br>
+<!-- -->(Accepted file types and max size?)</p>
+<p>![Image Gallery] [img-gallery-empty]</p>
+<p>Once you upload images the <strong>Image Gallery</strong> will show</p>
+<p>![Image Gallery] [img-gallery-uploaded]</p>
+<ul>
+<li class="">Click the upload icon to upload more photos</li>
+<li class="">Click the trashcan icon to delete current photo</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="346-item-detail-tabs">3.4.6 Item Detail Tabs<a href="#346-item-detail-tabs" class="hash-link" aria-label="Direct link to 3.4.6 Item Detail Tabs" title="Direct link to 3.4.6 Item Detail Tabs" translate="no">​</a></h3>
+<p>There are 6 different tabs.<br>
+<!-- -->Items in Category Group 2 excludes Drive, BOM, SN tabs.</p>
+<table><thead><tr><th>Tab</th><th>Description</th></tr></thead><tbody><tr><td>Specifications</td><td>Technical Specs / Vendor Info</td></tr><tr><td>Log</td><td>Audit log of all movements and edits made to item</td></tr><tr><td>History</td><td>Shows usage history by period and project</td></tr><tr><td>SN</td><td>Show all serial numbers for particular sensor</td></tr><tr><td>BOM</td><td>Bill of Materials</td></tr><tr><td>Drive</td><td>Google Drive Folder for files, documents, and images</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3461-specifications">3.4.6.1 Specifications<a href="#3461-specifications" class="hash-link" aria-label="Direct link to 3.4.6.1 Specifications" title="Direct link to 3.4.6.1 Specifications" translate="no">​</a></h4>
+<p>![Specifications] [specifications]</p>
+<p>The specifications tab contains a table where users can add any of number of rows, and fill it the relevant specifications.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="vendor-info">Vendor Info<a href="#vendor-info" class="hash-link" aria-label="Direct link to Vendor Info" title="Direct link to Vendor Info" translate="no">​</a></h5>
+<p>There are two sets of vendor information: main and alternative</p>
+<p>!!! tip</p>
+<p>For select vendors, you can click the Vendor PN which is linked to the vendor website URL.</p>
+<hr>
+<p><strong>Phase 2</strong></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3462-log">3.4.6.2 Log<a href="#3462-log" class="hash-link" aria-label="Direct link to 3.4.6.2 Log" title="Direct link to 3.4.6.2 Log" translate="no">​</a></h4>
+<p>![Log] [log]</p>
+<p>The log is a record of all actions performed regarding the item along with the user.
+Category = Reason in Stock Control (change “Reason” to “Category” in Stock Control?)</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3463-history">3.4.6.3 History<a href="#3463-history" class="hash-link" aria-label="Direct link to 3.4.6.3 History" title="Direct link to 3.4.6.3 History" translate="no">​</a></h4>
+<p>While the log shows all stock movements and item detail updates, the history tab will show usage history and other metrics related to projects and chronological data (i.e. how many used in 2025), for an overview or bigger picture of how it’s being used in the company’s production.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3464-sn">3.4.6.4 SN<a href="#3464-sn" class="hash-link" aria-label="Direct link to 3.4.6.4 SN" title="Direct link to 3.4.6.4 SN" translate="no">​</a></h4>
+<p>The sensors which are serialized will show all of their corresponding serial numbers here.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3465-bom">3.4.6.5 BOM<a href="#3465-bom" class="hash-link" aria-label="Direct link to 3.4.6.5 BOM" title="Direct link to 3.4.6.5 BOM" translate="no">​</a></h4>
+<p>Many of these items that we need to manufacture also have Bill of Materials as either a Google Sheet or an excel file within these folders. The BOMs need to be standardized and uploaded into the DB.</p>
+<p>This is critical for future updates to the ERP as BOMs will be used to calculate project expenses, and adjust inventory quantity based on production and projects.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3466-google-drive">3.4.6.6 Google Drive<a href="#3466-google-drive" class="hash-link" aria-label="Direct link to 3.4.6.6 Google Drive" title="Direct link to 3.4.6.6 Google Drive" translate="no">​</a></h4>
+<p>For some critical sensors and modules, we have a Google Drive folder for each item containing important files.
+We need to reorganize the Google Drive folder structure and link them to the PN, and embed the Google Drive folder using API.</p>
+<p>The image files in the Image Gallery should also go in this folder.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/03-inventory.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/pps-erp-sdd/projects"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">2. Projects</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/pps-erp-sdd/production"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">4. Production</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#31-overview" class="table-of-contents__link toc-highlight">3.1 Overview</a><ul><li><a href="#311-features" class="table-of-contents__link toc-highlight">3.1.1 Features</a></li><li><a href="#312-ui-map" class="table-of-contents__link toc-highlight">3.1.2 UI Map</a></li><li><a href="#313-pps-pn-system" class="table-of-contents__link toc-highlight">3.1.3 PPS PN System</a></li></ul></li><li><a href="#32-inventory-list-view" class="table-of-contents__link toc-highlight">3.2 Inventory List View</a><ul><li><a href="#321-search" class="table-of-contents__link toc-highlight">3.2.1 Search</a></li><li><a href="#322-categories" class="table-of-contents__link toc-highlight">3.2.2 Categories</a></li><li><a href="#323-filter" class="table-of-contents__link toc-highlight">3.2.3 Filter</a></li><li><a href="#324-tags" class="table-of-contents__link toc-highlight">3.2.4 Tags</a></li><li><a href="#325-filter-views-and-groups-phase-2" class="table-of-contents__link toc-highlight">3.2.5 Filter Views and Groups (PHASE 2)</a></li><li><a href="#326-stock-control" class="table-of-contents__link toc-highlight">3.2.6 Stock Control</a></li></ul></li><li><a href="#33-create-new-item" class="table-of-contents__link toc-highlight">3.3 Create New Item</a><ul><li><a href="#331-create-new-sensor" class="table-of-contents__link toc-highlight">3.3.1 Create New Sensor</a></li></ul></li><li><a href="#34-item-detail-view" class="table-of-contents__link toc-highlight">3.4 Item Detail View</a><ul><li><a href="#341-overview" class="table-of-contents__link toc-highlight">3.4.1 Overview</a></li><li><a href="#342-create-revision-and-subparts" class="table-of-contents__link toc-highlight">3.4.2 Create Revision and Subparts</a></li><li><a href="#343-edit-mode" class="table-of-contents__link toc-highlight">3.4.3 Edit Mode</a></li><li><a href="#344-stock-control-menu" class="table-of-contents__link toc-highlight">3.4.4 Stock Control Menu</a></li><li><a href="#345-image-gallery" class="table-of-contents__link toc-highlight">3.4.5 Image Gallery</a></li><li><a href="#346-item-detail-tabs" class="table-of-contents__link toc-highlight">3.4.6 Item Detail Tabs</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/pps-erp-sdd/">Home</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/adrian-moon/pps-erp-sdd" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
