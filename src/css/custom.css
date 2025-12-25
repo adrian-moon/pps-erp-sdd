@@ -15,12 +15,12 @@
   --ifm-background-color: white;
   --ifm-font-color-base: #1E293B;
 
-  --ifm-menu-color: #1E293B;             /* Default text color */
-  --ifm-menu-color-active: #ff5252;      /* Active link color */
-  --ifm-menu-color-background-active: rgba(255, 82, 82, 0.1); /* Active background */
-  --ifm-menu-color-background-hover: rgba(0, 0, 0, 0.05);     /* Hover background */
-  --ifm-toc-link-color: #64748b;        /* Default color */
-  --ifm-toc-border-color: #e2e8f0;      /* The vertical line color */
+  --ifm-menu-color: #1E293B;            
+  --ifm-menu-color-active: #ff5252;     
+  /* --ifm-menu-color-background-active: rgba(255, 82, 82, 0.1); */
+  --ifm-menu-color-background-hover: rgba(0, 0, 0, 0.05);    
+  --ifm-toc-link-color: var(--ifm-color-primary-lighter);   
+  --ifm-toc-border-color: #e2e8f0;     
 
   --ifm-font-family-base: 'Kanit', sans-serif;
 }
@@ -103,7 +103,7 @@ hr {
 
 .menu__link {
   font-family: 'gotham', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5;
 }
@@ -124,23 +124,32 @@ hr {
 
 .table-of-contents__link {
   font-family: 'gotham';
-  font-size: 1rem; /* Default is usually around 0.8rem */
+  font-size: 1rem !important; /* Default is usually around 0.8rem */
   margin-top: 5px; /* Adds a little space between links for readability */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-left: 2px solid transparent; /* Prepare for border transition */
+  padding-left: 8px;
+  transition: all 0.2s;
 }
 
-/* Optional: Make the "Active" link in the TOC bold */
 .table-of-contents__link--active {
   font-weight: bold;
   color: var(--ifm-color-primary);
+  background-color: #ff52521a!important;
+  border-left: 3px solid #ff5252;
+  padding-left: 12px;
+  margin-left: -5px; /* Pull back to align with border */
 }
 
 /* 1. Hide nested TOC levels (H3s) by default */
 /* We target the <ul> inside the top-level <li> */
-.table-of-contents > li > ul {
+/* .table-of-contents > li > ul {
   display: none;
   overflow: hidden;
   padding-left: 0;
-}
+} */
 
 /* Show: If the PARENT link (H2) is active, show the children (H3) */
 /* Note: Docusaurus adds 'active' class to the link, not the LI.
@@ -157,26 +166,7 @@ hr {
   to { opacity: 1; }
 }
 
-/* 2. Style the links */
-.table-of-contents__link {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  border-left: 2px solid transparent; /* Prepare for border transition */
-  padding-left: 8px;
-  transition: all 0.2s;
-}
 
-/* 3. ACTIVE STATE styling */
-.table-of-contents__link--active {
-  font-weight: bold;
-  border-left: 3px solid #ff5252;
-  padding-left: 12px;
-  margin-left: -5px; /* Pull back to align with border */
-}
-
-/* 4. Parent Heading Styling (Blue) */
-/* If a child (H3) is active, style the parent (H2) blue */
 .table-of-contents > li:has(ul > li > .table-of-contents__link--active) > .table-of-contents__link {
   color: #ff5252;
   font-weight: 700;
