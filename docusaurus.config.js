@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'PPS ERP SDD',
+  tagline: 'Official Documentation',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -68,9 +68,15 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+
+      // *** THIS IS THE FIX ***
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
+      // ***********************
+
       navbar: {
         title: 'My Site',
         logo: {
@@ -78,7 +84,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-        
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -127,7 +132,7 @@ const config = {
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        darkTheme: prismThemes.github,
       },
     }),
 };
