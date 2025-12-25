@@ -30,8 +30,6 @@
    2. GENERAL TYPOGRAPHY (.markdown scope)
    ========================================= */
 
-/* Docusaurus wraps documentation content in the .markdown class */
-
 .markdown h1 {
   font-size: 48px;
   font-weight: 600;
@@ -88,9 +86,7 @@
   display: block;
   margin: 2rem auto;
   padding: 1rem;
-
 }
-
 
 .menu__link {
   font-family: 'gotham', sans-serif;
@@ -102,7 +98,6 @@
 .breadcrumbs {
   display: none;
 }
-
 
 /* Hide scrollbars in the TOC but allow scrolling if needed */
 .table-of-contents {
@@ -239,4 +234,95 @@
   background-color: #f1f1f1;
 }
 
+/* =========================================
+   CUSTOM TABS STYLING
+   ========================================= */
 
+/* 1. The Tab Bar (Header) */
+.tabs {
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 0 !important;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* 2. Individual Tab Buttons */
+.tabs__item {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  color: #64748b;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-right: 4px;
+  transition: all 0.2s;
+}
+
+/* 3. Active Tab */
+.tabs__item--active {
+  background-color: white;
+  color: var(--ifm-color-primary);
+  border: 1px solid #d0d7de;
+  z-index: 5;
+}
+
+/* 4. Hover Effect */
+.tabs__item:hover:not(.tabs__item--active) {
+  background-color: rgba(0,0,0,0.05);
+  color: var(--ifm-color-primary);
+}
+
+
+.tabs + div {
+  border: 1px solid #d0d7de;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  margin-top: 0 !important;
+}
+
+/* =========================================
+   NUCLEAR DISABLE DARK MODE
+   ========================================= */
+
+/* Force specific "Light Mode" colors onto the "Dark Mode" selector */
+html[data-theme='dark'] {
+  /* 1. Backgrounds & Text */
+  --ifm-background-color: #ffffff !important;
+  --ifm-font-color-base: #1c1e21 !important;
+  --ifm-navbar-background-color: #ffffff !important;
+  
+  /* 2. Admonitions (Note, Tip, Info, Warning) - Force Light Backgrounds */
+  --ifm-color-info-contrast-background: #f1f6f8 !important;
+  --ifm-color-info-contrast-background: #f1f6f8 !important;
+  --ifm-color-success-contrast-background: #f0fdf4 !important;
+  --ifm-color-warning-contrast-background: #fffbea !important;
+  --ifm-color-danger-contrast-background: #fdf2f2 !important;
+  --ifm-alert-background-color: inherit !important;
+  --ifm-alert-border-color: #dadde1 !important;
+  --ifm-alert-color: #1c1e21 !important; /* Text inside alerts */
+  --ifm-color-secondary-contrast-background: #f6f8fa !important;
+
+  /* 3. Code Blocks & Tabs */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1) !important;
+  --ifm-tabs-color: #606770 !important;
+  --ifm-tabs-color-active: var(--ifm-color-primary) !important;
+  --ifm-toc-border-color: #dadde1 !important;
+}
+
+/* Force standard text color on everything in Dark Mode */
+html[data-theme='dark'] * {
+  scrollbar-color: #dadde1 #ffffff; /* Fix scrollbars */
+}
+
+/* Fix Admonition Icons (which turn white in dark mode) */
+html[data-theme='dark'] .alert {
+  --ifm-alert-foreground-color: #1c1e21 !important;
+}

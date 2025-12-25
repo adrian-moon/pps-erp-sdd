@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 3. Inventory
 
 ## 3.1 Overview
@@ -29,21 +32,32 @@ All PN numbers requiring separation will have their part numbers updated by bein
 
 ## 3.2 Inventory List View
 
-![Inventory List] [inventory-list]
+![Inventory List](/assets/inventory/inventory-list.png)
 
 ### 3.2.1 Search
 Users may search for:
 
-- **Part Number:** When exact part number is input and user presses Enter, go to item detail view.
+<Tabs>
+    <TabItem value="pn" label="Part Number">
+    When exact part number is input and user presses Enter, go to item detail view.
     - Also don’t filter out the other items when searching by number.
     - If I search 4258, It shows 4258 at the top and the rest of the numbers (4259,4260,4261…etc)
-- **Description:** When the user needs to search for numbers in the description, the search keyword needs to be put in quotations if starting with number.
+    </TabItem>
+
+    <TabItem value="desc" label="Description">
+    When the user needs to search for numbers in the description, the search keyword needs to be put in quotations if starting with number.
     - RES 204 searches for description
     - 8604 searches for PN
     - “8604 alternative” searches for description
     - 8604 alternative (how to disable?)
-- **Notes**
-- **Comments**
+    </TabItem>
+    <TabItem value="notes" label="Notes">
+    
+    </TabItem>
+    <TabItem value="comments" label="Comments">
+    
+    </TabItem>
+</Tabs>
 
 
 ### 3.2.2 Categories
@@ -102,13 +116,16 @@ Tags are global groups for various categorizations and multiple tags can be assi
 This tag is different from Category: Product / TactileGlove)
 
 
-!!! abstract "Administrator"
+:::info
 
     Categories and tags are both configurable in the Administator Preferences
 
-!!! note
+:::
 
-    Why we need tags: a TactileGlove system contains many different items and accessories. TactileGlove products (the actual gloves), plus modules, accessories…etc. Each of these items are set to their own category/sub-category. But need to be grouped together under a “TactileGlove” tag.  
+:::note
+
+    Why we need tags: a TactileGlove system contains many different items and accessories. TactileGlove products (the actual gloves), plus modules, accessories…etc. Each of these items are set to their own category/sub-category. But need to be grouped together under a “TactileGlove” tag.
+:::
 
 
 |Tags|
@@ -211,9 +228,11 @@ If you need to create additional subparts for existing PNs, you may do so in the
 The item detail view contains all the information regarding that PN.  
 By clicking the item row on the inventory list, you can enter its item detail view to see and edit the inventory item information.
 
-!!! info
+:::info
 
     All fields are copied to clipboard when clicked (change cursor and show tooltip) except for when user enters **edit mode**
+
+:::
 
 ### 3.4.2 Create Revision and Subparts
 For Items in Category Group 1, there is an [+Add] Button that opens up a menu for either 1 or 2 options depending on the category:
@@ -234,9 +253,9 @@ For already existing PNs the text is greyed out and checkbox option is disabled.
 Users cannot edit anything unless Edit Mode is enabled by pressing the button on the top right corner. 
 Once in Edit Mode, every field is editable except for the PN.
 
-!!! info
-
+:::info
      Stock qty control/menu options and image gallery are fully editable and functional whether in Edit Mode or not.
+:::
 
 ### 3.4.4 Stock Control Menu
 
@@ -256,9 +275,9 @@ The menu has 2 options:
 
 ![Unit Size] [unit-size]
 
-!!! tip
-
+:::tip
     Click the [Show/Hide Unit] button to toggle the unit size display
+:::
 
 ### 3.4.5 Image Gallery
 
@@ -298,9 +317,9 @@ The specifications tab contains a table where users can add any of number of row
 There are two sets of vendor information: main and alternative
 
 
-!!! tip
-
+:::tip
     For select vendors, you can click the Vendor PN which is linked to the vendor website URL.
+:::
 
 ---
 **Phase 2**

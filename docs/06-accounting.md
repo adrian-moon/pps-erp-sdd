@@ -1,6 +1,9 @@
 ---
 sidebar_position: 6
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 6. Accounting
 
 ## 6.1 Overview
