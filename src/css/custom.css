@@ -74,7 +74,7 @@
 
 .markdown strong, 
 .markdown b {
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .markdown a {
@@ -91,7 +91,7 @@
 
 }
 
-/* Increase Sidebar Menu Font Size */
+
 .menu__link {
   font-family: 'gotham', sans-serif;
   font-size: 1.4rem;
@@ -103,7 +103,6 @@
   display: none;
 }
 
-/* Table of Contents (Right Sidebar) */
 
 /* Hide scrollbars in the TOC but allow scrolling if needed */
 .table-of-contents {
@@ -197,3 +196,47 @@
   transform: rotate(0deg); /* Pointing down (open) */
   opacity: 1;
 }
+
+/* General Table Styling */
+.markdown table {
+  display: table; /* Ensures it acts like a table, sometimes needed */
+  width: 80%;    /* Makes table expand to fill the container */
+  border-collapse: collapse; /* Removes double borders */
+  margin-bottom: 2rem;
+}
+
+/* Table Header */
+.markdown table thead,
+.markdown table thead tr {
+  border: none; 
+  border-bottom: none; 
+  text-align: left;
+}
+
+.markdown table th {
+  background-color: #f6f8fa; /* Light gray background */
+  border: 1px solid #d0d7de; /* Header border */
+  padding: 12px;
+  font-weight: 500;
+}
+
+/* Table Cells */
+.markdown table td {
+  border: 1px solid #d0d7de; /* Cell border */
+  padding: 12px;
+}
+
+/* Zebra Striping (Alternating row colors) */
+.markdown table tr:nth-child(2n) {
+  background-color: #ffffff;
+}
+.markdown table tr:nth-child(2n+1) {
+  background-color: #fcfcfc; /* Very subtle gray for odd rows */
+}
+
+/* Hover Effect (Highlight row on mouseover) */
+.markdown table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
