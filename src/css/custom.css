@@ -30,8 +30,20 @@
    2. GENERAL TYPOGRAPHY (.markdown scope)
    ========================================= */
 
+.markdown {
+  font-weight: 350;
+}
+
+.markdown strong, 
+.markdown b {
+  font-weight: 500;
+}
+
+.markdown a {
+  text-decoration: underline;
+}
 .markdown h1 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 600;
   font-family: 'gotham', sans-serif;
   margin-bottom: 2rem;
@@ -53,10 +65,11 @@
 }
 
 .markdown h4 {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 550;
   font-family: 'gotham', 'Kanit', sans-serif;
   margin-top: 2rem;
+  color: var(--ifm-color-primary-lightest);
 }
 
 .markdown h5 {
@@ -64,24 +77,6 @@
   font-weight: 600;
   font-family: 'gotham', 'Kanit', sans-serif;
   color: var(--ifm-color-primary);
-}
-
-.markdown h6 {
-  font-size: 28px;
-  font-weight: 450;
-}
-
-.markdown {
-  font-weight: 350;
-}
-
-.markdown strong, 
-.markdown b {
-  font-weight: 500;
-}
-
-.markdown a {
-  text-decoration: underline;
 }
 
 /* .markdown img {
@@ -103,9 +98,9 @@ hr {
 
 .menu__link {
   font-family: 'gotham', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.2rem;
 }
 
 .breadcrumbs {
@@ -136,11 +131,11 @@ hr {
 
 .table-of-contents__link--active {
   font-weight: bold;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-menu-color-active);
   background-color: #ff52521a!important;
-  border-left: 3px solid #ff5252;
+  border-left: 3px solid var(--ifm-menu-color-active);
   padding-left: 12px;
-  margin-left: -5px; /* Pull back to align with border */
+  margin-left: -10px; /* Pull back to align with border */
 }
 
 /* 1. Hide nested TOC levels (H3s) by default */
@@ -168,7 +163,7 @@ hr {
 
 
 .table-of-contents > li:has(ul > li > .table-of-contents__link--active) > .table-of-contents__link {
-  color: #ff5252;
+  color: var(--ifm-color-primary);
   font-weight: 700;
   opacity: 1;
 }
