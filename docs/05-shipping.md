@@ -25,7 +25,7 @@ The **Shipment Module** is used to track all shipments sent and received by the 
 
 ## 5.2 Shipment List
 
-![Shipment List](/assets/shipping/shipment-list.png)
+![Shipment List](/assets/shipping/shipment-list.svg)
 
 The Shipment List shows all shipments entered into the ERP database.
 
@@ -75,21 +75,35 @@ Users can filter to only show shipments either **From** or **To** each PPS locat
 
 However, if you select both filters for the same location, the table will show both.
 
-![Location Filter](/assets/shipping/shipment-filter-location-both.png)
-
 For example, if the **From** and **To** filters are both set to **LA**, it shows *both shipments From AND To LA.*
+
+<Image 
+  src="/assets/shipping/location-filter-both.svg"
+  alt="Both Location Filters On"
+  caption="The table shows both Shipments From LA and To LA"
+/>
 
 ---
 
 ## 5.3  Create New Shipment
 
-![New Shipment](/assets/shipping/new-shipment.png)
+To create a new shipment that isn't linked, user can click the [+New Shipment] button.
+
+<Image 
+  src="/assets/shipping/new-shipment.svg"
+  alt="New Shipment"
+  caption="New Shipment Form"
+/>
 
 When creating a new shipment you must select the **Status**, **Category**, **From**, and **To**.
 
 ### 5.3.1 New Shipment Status
 
-![New Shipment: Status](/assets/shipping/new-shipment-status.png)
+<Image 
+  src="/assets/shipping/new-shipment-status.png"
+  alt="New Shipment"
+  caption="New Shipment Status Options"
+/>
 
 The default status is **Pending**.
 
@@ -144,7 +158,12 @@ Customers and RMA shipments will be created from the **Project** Module (TBD)
 If the shipment is for a single project, the user can simply search or select the project from the drop-down menu.  
 If the shipment isn't specific to a project, you may also select from the other categories including **Inventory**, **Lab**...etc.
 
-![Project Selection](/assets/shipping/project-selector.svg)
+<Image
+  src="/assets/shipping/project-selector.svg"
+  alt="Project Selector"
+  caption="Project Selection Drop-Down"
+/>
+
 
 :::info
 The Project textbox functions both as a searchbox and a drop-down menu
@@ -275,23 +294,55 @@ When photos are uploaded to an item, the camera icon shows on the item row to in
 ### 5.3.7 Notifications
 You can select which members or teams to notify using the checkbox menu.
 
+<Image 
+  src="/assets/shipping/notifications.svg"
+  alt="Notification"
+  caption="Notification Panel"
+/>
 
 ## 5.4 Shipment Detail
 
-Once a shipment has been submitted, its status either: **Pending** or **In Transit**.  
-In both cases, user can enter the Shipment Detail to view details and updates regarding the shipment.  
+Once a shipment has been submitted, its status is either: **Pending** or **In Transit**.  
+The Status button appears next to the header after form submission.
+
+![Shipment Detail](/assets/shipping/shipment-detail-heading.svg)
+
+In either case, user can enter the **Shipment Detail** to view details and updates about the shipment.  
+
 In order to make changes to the information, the user needs to enter **Edit Mode**. 
 
 ### 5.4.1 Edit Mode
 
-#### Pending Shipments
+<Image 
+  src="/assets/shipping/shipment-detail.svg"
+  alt="Shipment Detail"
+  caption="Shipment Detail"
+/>
 
-If the shipment is **Pending**, there is a Send button.
+#### Sending Shipments
+
+If the shipment is **Pending**, the **Edit Mode** enables the Send button.
+
+<Image 
+  src="/assets/shipping/shipment-detail-pending.svg"
+  alt="Pending Shipment"
+  caption="Pending Shipment (Edit Mode)"
+/>
+
+Once the shipment is sent, it alerts the user and notifications are sent out to the relevant users.
+
 
 #### Receiving Shipments
 
-For FedEx and DHL shipments, the shipment status will update to **Delivered**.  
+For FedEx and DHL shipments, the shipment status will update to **Delivered** once the API updates.
+
 For all other shipments, the shipment status will stay as **In Transit** until it is received by user. 
+
+<Image 
+  src="/assets/shipping/shipment-detail-delivered.svg"
+  alt="Delivered Shipment"
+  caption="Delivered Shipment (Edit Mode)"
+/>
 
 ### 5.4.2 Tabs
 
