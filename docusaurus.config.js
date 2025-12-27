@@ -14,6 +14,10 @@ const config = {
   tagline: 'Official Documentation',
   favicon: 'img/favicon.ico',
 
+  stylesheets: [
+    'https://use.typekit.net/jep7nnp.css',
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -138,3 +142,4 @@ const config = {
 };
 
 module.exports = config;
+
