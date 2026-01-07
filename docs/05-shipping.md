@@ -67,7 +67,16 @@ However there are only 2 ERP status updates that's affected by the API status: *
 
 All other FedEx statuses are ignored by the ERP and the shipment stays **In Transit**.
 
-Once the shipment has been delivered, the PPS employee that received the package will update the status after confirming delivery, opening up the shipment, and uploading images.
+:::note
+
+The API also fetches the tracking url from the official courier website (i.e. Fedex.com)
+
+The Link text is bold, and clicking it opens up a new tab with the URL
+
+![Shipment Table Row](/assets/shipping/shipment-table-row.svg)
+
+:::
+
 
 ### 5.2.3 Location Filter
 
