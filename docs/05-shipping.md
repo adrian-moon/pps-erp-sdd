@@ -393,7 +393,7 @@ Shows all status updates, edits, and courier API updates.
 
 Shipments created from other objects in the system will pull relevant information so that the data is linked.
 
-For example, you can create a shipment from an approved [Purchase Request](#).
+For example, you can create a shipment from an approved [Purchase Request](accounting#632-creating-a-linked-shipment).
 
 You can also create a shipment from: 
 
