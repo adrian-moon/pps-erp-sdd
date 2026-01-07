@@ -3,14 +3,19 @@ sidebar_position: 6
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Image from '@site/src/components/Image';
 
 # 6. Accounting
 
 ## 6.1 Overview
 
+---
+
 ## 6.2 Sales
 
-![Sales Process] [flow-sales]
+### 6.2.1 Sales Process
+
+![Shipment Detail](/assets/accounting/flow-sales.jpg)
 
 1. New Customer inquiry received
 1. Customer Qualification
@@ -23,11 +28,17 @@ import TabItem from '@theme/TabItem';
 1. Payment is received
 1. Invoice is closed
 
+
+---
+
 ## 6.3 Purchasing
+
+
+For all purchases above a certain amount, the employee making the order must submit a purchase request for approval.
 
 ### 6.3.1 Purchase Process
 
-![Purchase Process] [flow-purchase-process]
+![Shipment Detail](/assets/accounting/flow-purchase-process.jpg)
 
 1. New Purchase Request is submitted
 1. Purchase Request is added to the list
@@ -38,52 +49,142 @@ import TabItem from '@theme/TabItem';
 1. Once payment has been made, the Bill is closed
 1. When the transaction is posted on QB, the Bill is matched with the transaction.
 
-### 6.3.2 Purchase Request
 
-For all purchases above a certain amount, the employee making the order needs to submit a purchase request for approval.
+### 6.3.2 Purchase Requisition List
 
-##### New Purchase Request
+<Image 
+  src="/assets/accounting/purchase-list.svg"
+  alt="Purchase Requisition List"
+  caption=""
+/>
 
-When you click the button, the Purchase Request opens up.
+The Purchase Requisition List shows all entries with their current statuses.
 
-![New Purchase Request] [new-purchase-request]
 
-1. You need to select From and To, a description of the items and any notes to explain what the purchase is for.
-
-1. You can also upload a pdf or image file of the estimate that you received from the vendor.
-
-1. Then you need to enter all the items into the Item List just like with the [Shipment](#522-shipment-item-list)
-
-1. Then manually enter the cost for the shipping and taxes to match the total order amount.
-
-1. Submit the request.
-
-#### Purchase Request List
-
-![Purchase Request List] [purchase-list]
-
-The Purchase Request List shows all entries with their current status
+#### Purchase Request Status
 
 | Status | Description |
 |----------|-------------|
-|Pending   |Purchase Requests awaiting decision|
-|Approved|Purchase Requests approved by a director|
-|Rejected|Purchase Requests rejected|
-|Purchased|Approved Purchase Requests that have been ordered|
+|![Pending](/assets/accounting/status-button-pending.svg)|Purchase Requests awaiting decision|
+|![Approved](/assets/accounting/status-button-approved.svg)|Purchase Requests approved by a director|
+|![Rejected](/assets/accounting/status-button-rejected.svg)|Purchase Requests rejected|
+|![Purchased](/assets/accounting/status-button-purchased.svg)|Approved Purchase Requests that have been ordered|
 
-#### Purchase Approval
+### 6.3.3 Purchase Request Form
 
-![Purchase Approval] [purchase-approval]
+#### New Purchase Request
 
-Directors will be able to Approve or Reject the **Purchase Request** by using the buttons. 
+When you click the [+New Purchase Request] button from the **Purchase Requisition List**, a new Purchase Request form opens up.
 
-Approved **Purchase Requests** are issued a **PO #** and the person who submitted the request is notified.
+<Image 
+  src="/assets/accounting/new-purchase-request.svg"
+  alt="New Purchase Request"
+  caption=""
+/>
 
-![Approved Purchase] [approved-purchase]
+1. User must select **From** and **To**, and also add a **description**.
 
-1. Once order is placed, if payment has been made, change status.
-1. If no payment has been made then, create a bill.
-1. After the order has been placed, upload the receipt or order confirmation.
-1. Create a linked shipment
+1. The **From** textbox is a search/dropdown from the Active **Vendors** List.
+
+#### Adding Items
+
+Entering items for a **Purchase Request** is the same process as the Shipment Form:
+[5.3.4 Add Items to Shipment](shipping#534-add-items-to-shipment)
+
+However for **Purchase Requests**, user _must_ enter cost of each item after they've been added to the list.
+
+![Total Calculator](/assets/accounting/add-items-cost.svg)
+
+Optionally, the user may also manually enter the costs for taxes, shipping, and other fees to get the total order amount.
+
+User can also upload a pdf or image file of the Quote or estimate that is received from the vendor.
+
+<Image 
+  src="/assets/accounting/purchase-quote-upload.svg"
+  alt="New Purchase Request"
+  caption="Initial"
+/>
+
+<Image 
+  src="/assets/accounting/purchase-quote-uploaded.svg"
+  alt="New Purchase Request"
+  caption="PDF file of Quotation Uploaded"
+/>
+
+
+### 6.3.4 Purchase Approval Process
+
+<Image 
+  src="/assets/accounting/pending-purchase.svg"
+  alt="Pending Purchase"
+  caption="Purchase Approval"
+/>
+
+
+Directors will be able to Approve or Reject the **Purchase Request** by using the [Approve] or [Reject] button.  
+They may also edit the request form to change Qty or other details.
+
+For Multiquote Purchase Request, a radio dial option appears that allows directors to select the approved option.  
+The first option is selected by default. 
+
+<Image 
+  src="/assets/accounting/quote-selection.svg"
+  alt="Quote Selection"
+  caption="Purchase Approval (Quote Selection)"
+/>
+
+#### Approved Purchase Requests
+
+Approved **Purchase Requests** are issued a **PO #** and a Purchase Order is created in QB.
+
+An **Approved** Purchase Request has a [+Shipment] button which allows you to create a **Linked Shipment**.
+
+<Image 
+  src="/assets/accounting/approved-purchase.svg"
+  alt="Approved Purchase"
+  caption="Purchase Approval (Approved)"
+/>
+
+
+1. Once order is placed, if payment has been made, change PO status to **Ordered** and skip to **Step 3**.
+1. If no payment has been made then, create a bill (QB).
+1. After the order has been placed, user should upload the file of the receipt or order confirmation.
+1. Create linked shipment.
+
+:::info
+If the order total on the PO is different from the actual order amount, user must edit the PO to match the total. 
+:::
+
 
 ### 6.3.2 Creating a Linked Shipment
+
+When user clicks the [+Shipment] button, a Linked Shipment form appears.
+
+<Image 
+  src="/assets/accounting/linked-shipment.svg"
+  alt="Linked Shipment"
+  caption="Linked Shipment Form"
+/>
+
+All of the details are copied, and there is now a field for **Courier** and **Tracking #**. 
+
+A Linked Shipment is different from a regular shipment becuase there is an **Order** tab that pulls the corresponding data from the PO such as Vendor Order # and Order Total. 
+
+
+![Total Calculator](/assets/accounting/linked-shipment-order-tab.svg)
+
+The **Purchase Order** field also has a button that links you back to the PO.
+
+And likewise the PO has a Linked Shipment button at the top.
+
+<Image 
+  src="/assets/accounting/purchased-purchase.svg"
+  alt="Linked Shipment"
+  caption="Linked PO"
+/>
+
+The user sets the **Status** accordingly:
+- **In Transit** if order is shipped or will ship asap
+- **Pending** if order will not ship immediately
+
+And enters the Tracking Information if available, then submits the form by pressing the button at the top. 

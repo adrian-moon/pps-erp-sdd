@@ -49,11 +49,11 @@ As far as PPS and the ERP and are concerned, there are 5 statuses for shipments.
 
 | Status | Description |
 |----------|-------------|
-|**Pending**   |Scheduled shipments that haven't been shipped|
-|**In Transit**|Shipments picked up by the courier and on their way|
-|**Delivered**|Shipments that have been delivered by the courier (API)|
-|**Received**|Shipments that have been received and checked by a PPS member|
-|**Delayed**|Shipments that are stuck in clearance (API)|
+|![Pending](/assets/shipping/status-button-pending.svg)|Scheduled shipments that haven't been shipped|
+|![In Transit](/assets/shipping/status-button-intransit.svg)|Shipments picked up by the courier and on their way|
+|![Delivered](/assets/shipping/status-button-delivered.svg)|Shipments that have been delivered by the courier (API)|
+|![Received](/assets/shipping/status-button-received.svg)|Shipments that have been received and checked by a PPS member|
+|![Delayed](/assets/shipping/status-button-delayed.svg)|Shipments that are stuck in clearance (API)|
 
 
 #### FedEx API
@@ -87,7 +87,7 @@ For example, if the **From** and **To** filters are both set to **LA**, it shows
 
 ## 5.3  Create New Shipment
 
-To create a new shipment that isn't linked, user can click the [+New Shipment] button.
+To create a new shipment that isn't linked, user can click the [+New Shipment] button from the **Shipment List**.
 
 <Image 
   src="/assets/shipping/new-shipment.svg"
@@ -95,7 +95,11 @@ To create a new shipment that isn't linked, user can click the [+New Shipment] b
   caption="New Shipment Form"
 />
 
-When creating a new shipment you must select the **Status**, **Category**, **From**, and **To**.
+When creating a new shipment the fields for **Status**, **Category**, **From**, and **To** are required.
+
+:::info
+The **Courier** field has 5 options; FedEX, DHL, UPS, USPS, and Other.
+:::
 
 ### 5.3.1 New Shipment Status
 
@@ -114,7 +118,7 @@ The available options are:
 
 ### 5.3.2 Shipment Category & Location
 
-The drop-down options for **From** and **To** will change depending on the **Category**.
+The drop-down options for **From** and **To** will change depending on the shipment **Category**.
 
 <Tabs>
   <TabItem value="purchase" label="Purchase" default>
@@ -155,7 +159,10 @@ Customers and RMA shipments will be created from the **Project** Module (TBD)
 
 ### 5.3.3 Shipment Project
 
-If the shipment is for a single project, the user can simply search or select the project from the drop-down menu.  
+If the shipment is for a single project, the user can simply search or select the project from the drop-down menu.
+
+The list will be pulled from active Projects list (TBD)
+
 If the shipment isn't specific to a project, you may also select from the other categories including **Inventory**, **Lab**...etc.
 
 <Image
@@ -168,6 +175,8 @@ If the shipment isn't specific to a project, you may also select from the other 
 :::info
 The Project textbox functions both as a searchbox and a drop-down menu
 :::
+
+
 
 
 #### Multi Project Option
@@ -206,7 +215,7 @@ However, it displays as "Various" in this context, but the actual **Project** da
 
 
 
-### 5.3.4 Shipment Item List
+### 5.3.4 Add Items to Shipment
 
 You can add items by clicking the [+] icon on the bottom right corner of the **Item List** which opens up the **Add Items** window.
 
@@ -222,17 +231,25 @@ You can add items by clicking the [+] icon on the bottom right corner of the **I
   caption="Add Items Pop-Up"
 />
 
-There are two different types of item you can add to a shipment.
+There are two different types of item you can add to a shipment.  
+You can add more rows by clicking either of the buttons:
 
-1. **add PPS item**
+1. **PPS item**
     - typing in the **PN**  
     or
     - searching for the **Description**.
 
-2. **add custom item**
+
+<Image 
+  src="/assets/shipping/add-items-description-dropdown.svg"
+  alt="Add Items"
+  caption="Description Search"
+/>
+
+2. **Custom item**
     - typing in the **Description**.
 
-You can add more rows by clickin either of the buttons at the top of the list.
+
 
 
 ### 5.3.5 Estimated Ship Date
@@ -241,17 +258,30 @@ You can enter the **Estimated Ship Date** typing in the date, or opening up the 
 
 <Image 
   src="/assets/shipping/shipment-date-table.svg"
-  alt="Add Items"
+  alt="Shipment Date Table"
   caption="Shipment Date Table"
 />
 
+Once the Estimated Ship Date is entered, it shows in a light gray text (color-text-secondary)
+
+<Image 
+  src="/assets/shipping/shipment-date-table-2.svg"
+  alt="Estimated Ship Date"
+  caption="Estimated Ship Date is displayed in gray text"
+/>
+
+<Image 
+  src="/assets/shipping/shipment-list-estimated-ship-date.svg"
+  alt="Shipment List"
+  caption="The Estiamted Ship Date is also gray on the shipment list"
+/>
 
 
 ### 5.3.6 Shipment Photos
 
-All outgoing and incoming shipments need to have photos uploaded. 
+All outgoing and incoming shipments need to have photos uploaded.  
+Depending on the category, a shipment may not contain any outgoing photos. 
 
-Depending on the category, a shipment may not contain any outgoing photos.  
 For example, **Purchase** shipments usually do not require any outgoing photos.
 
 #### Uploading Photos
