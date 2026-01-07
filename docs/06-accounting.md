@@ -9,6 +9,18 @@ import Image from '@site/src/components/Image';
 
 ## 6.1 Overview
 
+The Accounting module is closely linked with the Project module and is fully integrated with QBO API for all reporting, bookkeeping, payment processing to be done internally within the ERP.
+
+### Quickbooks Integration
+
+-  Accounts
+-  Purchase Orders
+-  Bills
+-  Invoices
+-  Customers
+-  Vendors
+
+
 ---
 
 ## 6.2 Sales
@@ -28,6 +40,11 @@ import Image from '@site/src/components/Image';
 1. Payment is received
 1. Invoice is closed
 
+### 6.2.2 Customer List
+
+### 6.2.3 New Customer
+
+#### Customer Qualification
 
 ---
 
@@ -50,7 +67,9 @@ For all purchases above a certain amount, the employee making the order must sub
 1. When the transaction is posted on QB, the Bill is matched with the transaction.
 
 
-### 6.3.2 Purchase Requisition List
+### 6.3.2 Vendors List
+
+### 6.3.3 Purchase Requisition List
 
 <Image 
   src="/assets/accounting/purchase-list.svg"
@@ -70,7 +89,7 @@ The Purchase Requisition List shows all entries with their current statuses.
 |![Rejected](/assets/accounting/status-button-rejected.svg)|Purchase Requests rejected|
 |![Purchased](/assets/accounting/status-button-purchased.svg)|Approved Purchase Requests that have been ordered|
 
-### 6.3.3 Purchase Request Form
+### 6.3.4 Purchase Request Form
 
 #### New Purchase Request
 
@@ -112,7 +131,7 @@ User can also upload a pdf or image file of the Quote or estimate that is receiv
 />
 
 
-### 6.3.4 Purchase Approval Process
+### 6.3.5 Purchase Approval Process
 
 <Image 
   src="/assets/accounting/pending-purchase.svg"
@@ -156,7 +175,7 @@ If the order total on the PO is different from the actual order amount, user mus
 :::
 
 
-### 6.3.2 Creating a Linked Shipment
+### 6.3.6 Creating a Linked Shipment
 
 When user clicks the [+Shipment] button, a Linked Shipment form appears.
 

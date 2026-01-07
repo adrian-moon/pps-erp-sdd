@@ -4,6 +4,7 @@ slug: /
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Image from '@site/src/components/Image';
 
 # 1. Overview
 

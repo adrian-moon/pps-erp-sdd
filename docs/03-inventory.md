@@ -3,11 +3,13 @@ sidebar_position: 3
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Image from '@site/src/components/Image';
 
 # 3. Inventory
 
 ## 3.1 Overview
-The Inventory Module is used to track sensors, modules, components, and all parts, materials, supplies related to production. Monitor quantities, locations, lot tracking, and stock movements.
+The Inventory Module is used to track sensors, modules, components, and all parts, materials, supplies related to production.  
+Monitor quantities, locations, lot tracking, and stock movements.
 
 ### 3.1.1 Features
 - Inventory view filter/search/sort
@@ -30,11 +32,22 @@ Every new item that requires inventory management is assigned a unique PN and ad
 Currently there is one single PN for sensors, electrodes, and each sensor specification.  
 All PN numbers requiring separation will have their part numbers updated by being assigned a unique suffix.
 
-## 3.2 Inventory List View
+## 3.2 Inventory List
 
-![Inventory List](/assets/inventory/inventory-list.png)
+<Image 
+  src="/assets/inventory/inventory-list.svg"
+  alt="Inventory List"
+  caption=""
+/>
 
 ### 3.2.1 Search
+
+<Image 
+  src="/assets/inventory/inventory-list-header.svg"
+  alt="Inventory List"
+  caption=""
+/>
+
 Users may search for:
 
 <Tabs>
@@ -89,16 +102,31 @@ There are custom manufactured items such as skins, but are not systems or electr
 Users may use the Category Filter Dropdown to select any category and/or sub-category to show.
 
 
-![Category Filter](/assets/inventory/category-filter.png)
+<Image 
+  src="/assets/inventory/inventory-list-category-filter-open.svg"
+  alt="Inventory List"
+  caption=""
+/>
 
 1. Checking/unchecking the main category selects all sub-categories within that group
 1. When multiple random selections are made, show the number of selections
 1. When hovering over the drop box, the hoverbox shows all the selections in a vertical pop up
 
-### 3.2.3 Filter
-![Inventory Filter](/assets/inventory/inventory-filter.png)
+:::info
 
-#### Status Filter
+    Categories and tags are both configurable in the Administator Preferences
+
+:::
+
+### 3.2.3 Filter
+
+<Image 
+  src="/assets/inventory/inventory-filter.svg"
+  alt="Inventory Filter"
+  caption=""
+/>
+
+#### Item Status
 
 | Status | Description |
 |----------|-------------|
@@ -106,21 +134,23 @@ Users may use the Category Filter Dropdown to select any category and/or sub-cat
 |Inactive |Obsolete or archived items|
 |Low Stock|Automatically updates when qty is below the threshold (See Item Detail)|
 
-#### Location Filter
+#### Location
 
 The location filter shows only items with at least a qty of 1+ for that location.  
 It also hides unselected locations from the inventory list.
+
+<Image 
+  src="/assets/inventory/inventory-list-location-filter.svg"
+  alt="Inventory Filter"
+  caption="Location Filter set to LA"
+/>
 
 ### 3.2.4 Tags
 Tags are global groups for various categorizations and multiple tags can be assigned to a single item.  
 This tag is different from Category: Product / TactileGlove)
 
 
-:::info
 
-    Categories and tags are both configurable in the Administator Preferences
-
-:::
 
 :::note
 
@@ -141,8 +171,7 @@ This tag is different from Category: Product / TactileGlove)
 
 
 
-### 3.2.5 Filter Views and Groups (phase 2)
-![Filter Views and Groups] [filter-views-groups]
+### 3.2.5 Filter Views and Groups
 
 There are 2 separate features
 
@@ -164,9 +193,15 @@ They can add non-essential items as a Custom Item to simply track quantity.
 
 
 ### 3.2.6 Adjust Stock Quantity
-When you hover over the item row, the stock adjust control buttons appear.
 
-![Stock Control](/assets/inventory/stock-control-01.png)
+When you hover over an item row, the stock adjust control buttons appear.
+
+<Image 
+  src="/assets/inventory/stock-control-01.png"
+  alt="Stock Control"
+  caption="Stock Control Menu appears when hovering over Item Row"
+/>
+
 
 There are 3 different buttons:
 
@@ -181,14 +216,18 @@ When you click, the pop up window opens and users can set the:
 - Reason
 - Notes
 
-![Adjust Stock](/assets/inventory/stock-control-02.png)
+![Adjust Stock](/assets/inventory/stock-control-window.svg)
 
 **Location, Quantity,** and **Reason** are required.
 
 ## 3.3 Create New Item
 User can create a new item by clicking the [+Add] Button on the **Inventory List**.
 
-![New Item](/assets/inventory/new-item.png)
+<Image 
+  src="/assets/inventory/new-item.svg"
+  alt="New Item"
+  caption=""
+/>
 
 1. The next PN in the sequence is auto populated. This is not editable along with the Rev # and Status.
 2. All other fields are editable.
@@ -209,7 +248,11 @@ For example, for sensor design **PN3440** there are 4 different subparts all wit
 
 When user creates a new item and **Sensor** is selected for the Category, the checkbox options for additional Subpart configurations appears.
 
-![New Sensor](/assets/inventory/new-sensor.png)
+<Image 
+  src="/assets/inventory/new-subparts.svg"
+  alt="New Item"
+  caption=""
+/>
 
 1. The default option has “PN” checked. This is the original PN without additional suffixes. 
 2. Users can select as many options as needed.
@@ -223,7 +266,11 @@ If you need to create additional subparts for existing PNs, you may do so in the
 
 ## 3.4 Item Detail View
 
-![Item Detail View](/assets/inventory/item-detail.png)
+<Image 
+  src="/assets/inventory/item-detail.svg"
+  alt="Item Detail"
+  caption=""
+/>
 
 ### 3.4.1 Overview
 
@@ -259,29 +306,50 @@ Once in Edit Mode, every field is editable except for the PN.
      Stock qty control/menu options and image gallery are fully editable and functional whether in Edit Mode or not.
 :::
 
-### 3.4.4 Stock Control Menu
+### 3.4.4 Stock Control Display
 
-![Stock Menu](/assets/inventory/stock-menu-detail.png)
+<Image 
+  src="/assets/inventory/detail-stock-empty.svg"
+  alt="Inventory Stock Display"
+  caption=""
+/>
 
-The menu has 2 options:
+### 3.4.4.1 Low Stock Threshold Settings
+
+Click the menu icon to open up the settings menu
+
+<Image 
+  src="/assets/inventory/detail-stock-menu.svg"
+  alt="Inventory Stock Display"
+  caption=""
+/>
 
 - Configure Low Stock
     - Set threshold qty
-    - Configure notification settings (phase 2)
+    - Set user notifications
 
-![Low Stock](/assets/inventory/low-stock.png)
+<Image 
+  src="/assets/inventory/low-stock-window.svg"
+  alt="Low Stock"
+  caption=""
+/>
 
+### 3.4.4.2 Unit Size Settings
 
 - Set Unit Size
     - The default unit size is “ea” 
 
-![Unit Size](/assets/inventory/unit-size.png)
+<Image 
+  src="/assets/inventory/unit-size.svg"
+  alt="Unit Size"
+  caption=""
+/>
 
 :::tip
     Click the [Show/Hide Unit] button to toggle the unit size display
 :::
 
-### 3.4.5 Image Gallery
+### 3.4.5 Item Image
 
 Click the empty gallery window to upload image files  
 (Accepted file types and max size?)
@@ -311,7 +379,11 @@ Items in Category Group 2 excludes Drive, BOM, SN tabs.
 
 #### 3.4.6.1 Specifications
 
-![Specifications](/assets/inventory/specifications.png)
+<Image 
+  src="/assets/inventory/item-specifications.svg"
+  alt="Item Specifications"
+  caption=""
+/>
 
 The specifications tab contains a table where users can add any of number of rows, and fill it the relevant specifications.
 
@@ -324,11 +396,8 @@ There are two sets of vendor information: main and alternative
 :::
 
 ---
-**Phase 2**
 
 #### 3.4.6.2 Log
-
-![Log]
 
 The log is a record of all actions performed regarding the item along with the user.
 Category = Reason in Stock Control (change “Reason” to “Category” in Stock Control?)

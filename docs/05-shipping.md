@@ -358,7 +358,7 @@ In order to make changes to the information, the user needs to enter **Edit Mode
   caption="Shipment Detail"
 />
 
-#### Sending Shipments
+### 5.4.1.1 Sending Shipments
 
 If the shipment is **Pending**, the **Edit Mode** enables the Send button.
 
@@ -371,7 +371,7 @@ If the shipment is **Pending**, the **Edit Mode** enables the Send button.
 Once the shipment is sent, it alerts the user and notifications are sent out to the relevant users.
 
 
-#### Receiving Shipments
+### 5.4.1.2 Receiving Shipments
 
 For FedEx and DHL shipments, the shipment status will update to **Delivered** once the API updates.
 
