@@ -29,7 +29,35 @@ The **Shipment Module** is used to track all shipments sent and received by the 
 
 The Shipment List shows all shipments entered into the ERP database.
 
-### 5.2.1 Shipment Category
+### Shipment Table Columns
+|| Column | Description |
+|-|--------|-------------|
+|1|**Status**   |[Shipment Status](#521-shipment-status)|
+|2|**Created**|Created Date|
+|3|**Shipped**|Shipped Date / [Estimated Ship Date](#535-estimated-ship-date)|
+|4|**From**|Shipment Departing Location|
+|5|**To**|Shipment Arrival Location|
+|6|**Category**|[Shipment Category](#522-shipment-category)|
+|7|**Project**|Shipment Project|
+|8|**Description**|General Description of Items|
+|9|**Delivered**|[Delivered Date](#fedex-api)|
+|10|**Received**|Received Date|
+|11|**Courier**|Shipping Company|
+|112|**Tracking #**|Courier Tracking Number|
+
+### 5.2.1 Shipment Status
+
+As far as PPS and the ERP and are concerned, there are 5 statuses for shipments.
+
+| Status | Description |
+|----------|-------------|
+|![Pending](/assets/shipping/status-button-pending.svg)|Scheduled shipments that haven't been shipped|
+|![In Transit](/assets/shipping/status-button-intransit.svg)|Shipments picked up by the courier and on their way|
+|![Delivered](/assets/shipping/status-button-delivered.svg)|Shipments that have been delivered by the courier (API)|
+|![Received](/assets/shipping/status-button-received.svg)|Shipments that have been received and checked by a PPS member|
+|![Delayed](/assets/shipping/status-button-delayed.svg)|Shipments that are stuck in clearance (API)|
+
+### 5.2.2 Shipment Category
 
 There are 4 main categories of shipments
 
@@ -43,17 +71,7 @@ There are 4 main categories of shipments
 - All **Purchase** shipments are Incoming (Vendor > PPS)  
 - All **Customer** shipments are Outgoing. (PPS > Customer)
 
-### 5.2.2 Shipment Status
 
-As far as PPS and the ERP and are concerned, there are 5 statuses for shipments.
-
-| Status | Description |
-|----------|-------------|
-|![Pending](/assets/shipping/status-button-pending.svg)|Scheduled shipments that haven't been shipped|
-|![In Transit](/assets/shipping/status-button-intransit.svg)|Shipments picked up by the courier and on their way|
-|![Delivered](/assets/shipping/status-button-delivered.svg)|Shipments that have been delivered by the courier (API)|
-|![Received](/assets/shipping/status-button-received.svg)|Shipments that have been received and checked by a PPS member|
-|![Delayed](/assets/shipping/status-button-delayed.svg)|Shipments that are stuck in clearance (API)|
 
 
 #### FedEx API
