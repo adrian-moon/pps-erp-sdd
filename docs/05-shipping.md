@@ -23,6 +23,7 @@ The **Shipment Module** is used to track all shipments sent and received by the 
 
 ---
 
+
 ## 5.2 Shipment List
 
 ![Shipment List](/assets/shipping/shipment-list.svg)
@@ -114,7 +115,9 @@ For example, if the **From** and **To** filters are both set to **LA**, it shows
   caption="The table shows both Shipments From LA and To LA"
 />
 
+
 ---
+
 
 ## 5.3  Create New Shipment
 
@@ -361,6 +364,10 @@ You can select which members or teams to notify using the checkbox menu.
   caption="Notification Panel"
 />
 
+
+---
+
+
 ## 5.4 Shipment Detail
 
 Once a shipment has been submitted, its status is either: **Pending** or **In Transit**.  
@@ -405,11 +412,17 @@ For all other shipments, the shipment status will stay as **In Transit** until i
   caption="Delivered Shipment (Edit Mode)"
 />
 
+
+---
+
+
 ## 5.5 Billing
 
 
 The Billing tab shows the shipping cost as well as the billing party for the shipment.  
-The information is populated after FedEx Invoice CSV has been imported into the ERP.
+The data is updated after FedEx Invoice data has been imported into the ERP.
+
+(Need to set up FedEx sftp server)
 
 <Image 
   src="/assets/shipping/shipment-tab-billing.svg"
@@ -437,11 +450,14 @@ Clicking on the row opens up the FedEx Invoice Detail
   caption="FedEx Invoice Detail"
 />
 
-Here you can see all the shipments that are attached to the invoice, as well as other details like Invoice status and date.
+Here you can see all the shipments that are attached to the invoice, as well as other details like Invoice status and date.  
+User can double-click a shipment to go to its detail. 
 
 In order to upload FedEx Invoices, you must first get the invoice data.
 
 ### 5.5.3 Download Invoices From FedEx.com
+
+_(Unnecessary if sftp server is possible)_
 
 You can download the CSV invoice data from the FedEx website.
 
@@ -493,6 +509,10 @@ Click the Upload button on the FedEx Invoices List to upload the csv file.
   caption="FedEx Invoice List"
 />
 
+
+
+
+
 ### 5.5.5 FedEx Invoice CSV Format
 
 The following column data need to be added to the corresponding shipment detail using the tracking number from **Column J**.
@@ -513,6 +533,7 @@ Each FedEx Invoice is also created and added to the list
 |BY|Customs Value               |Shipment Data|
 
 
+---
 
 
 ## 5.6 Order
@@ -530,6 +551,9 @@ Only for Linked Shipments that are created from [Purchases](accounting#64-purcha
 1. **Purchase Order** - Link button that takes you to the PO
 1. **Vendor Order #** - Fetched from Linked Purchase
 1. **Order Total** - Fetched from Linked Purchase
+
+
+---
 
 
 ## 5.7 Log
