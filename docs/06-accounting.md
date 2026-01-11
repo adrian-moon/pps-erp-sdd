@@ -11,21 +11,49 @@ import Image from '@site/src/components/Image';
 
 The Accounting module is closely linked with the Project module and is fully integrated with QBO API for all reporting, bookkeeping, payment processing to be done internally within the ERP.
 
-### Quickbooks Integration
+## 6.2 Quickbooks Integration
 
--  Accounts
--  Purchase Orders
--  Bills
--  Invoices
--  Customers
--  Vendors
+This image from the Intuit Developer official website shows common entities and how they relate to customer-facing elements
+<Image 
+  src="/assets/accounting/qb-api-chart.png"
+  alt="QB API Chart"
+  caption="Source: https://static.developer.intuit.com/images/ResourceDiagram.png"
+/>
+
+**List entities/resources**: Lists used to track individuals or accounts commonly referenced in transactions. We sometimes call list resources “name lists.”
+
+`Account`
+`Customer`
+`Vendor`
+`Employee`
+
+**Transaction entities/resources**: Sales forms used for transactions.
+
+`Invoice` `Bill` `Payment` `BillPayment` `Refund`
+
+
+**Reports entities/resources**: Reports used to track business metrics.
+
+
+`ProfitandLoss` `GeneralLedger` `CashFlow`
+
+**Inventory entities/resources**: Inventory items and inventory management.
+
+`Item`
+
+The Item entity tracks products and services, as well as inventory hierarchies and bundles.
+
+**Journal entry**: A type of record that accountants use to make corrections or major changes to a chart of accounts, such year-end adjustments or errors. Use this sparingly.
+
+`JournalEntry`
+
 
 
 ---
 
-## 6.2 Sales
+## 6.3 Sales
 
-### 6.2.1 Sales Process
+### 6.3.1 Sales Process
 
 ![Shipment Detail](/assets/accounting/flow-sales.jpg)
 
@@ -40,20 +68,38 @@ The Accounting module is closely linked with the Project module and is fully int
 1. Payment is received
 1. Invoice is closed
 
-### 6.2.2 Customer List
+### 6.3.2 Customer List
 
-### 6.2.3 New Customer
+- Contact
+- First Name
+- Middle Name
+- Last Name
+- Company Name
+- Customer Display Name*
+- Email
+- Phone Number
+- Street Address 1
+- Street Address 2
+- City
+- State
+- Zip Code
+- Country
+
+- Terms
+- Sales Tax
+
+### 6.3.3 New Customer
 
 #### Customer Qualification
 
 ---
 
-## 6.3 Purchasing
+## 6.4 Purchasing
 
 
 For all purchases above a certain amount, the employee making the order must submit a purchase request for approval.
 
-### 6.3.1 Purchase Process
+### 6.4.1 Purchase Process
 
 ![Shipment Detail](/assets/accounting/flow-purchase-process.jpg)
 
@@ -67,9 +113,9 @@ For all purchases above a certain amount, the employee making the order must sub
 1. When the transaction is posted on QB, the Bill is matched with the transaction.
 
 
-### 6.3.2 Vendors List
+### 6.4.2 Vendors List
 
-### 6.3.3 Purchase Requisition List
+### 6.4.3 Purchase Requisition List
 
 <Image 
   src="/assets/accounting/purchase-list.svg"
@@ -89,7 +135,7 @@ The Purchase Requisition List shows all entries with their current statuses.
 |![Rejected](/assets/accounting/status-button-rejected.svg)|Purchase Requests rejected|
 |![Purchased](/assets/accounting/status-button-purchased.svg)|Approved Purchase Requests that have been ordered|
 
-### 6.3.4 Purchase Request Form
+### 6.4.4 Purchase Request Form
 
 #### New Purchase Request
 
@@ -131,7 +177,7 @@ User can also upload a pdf or image file of the Quote or estimate that is receiv
 />
 
 
-### 6.3.5 Purchase Approval Process
+### 6.4.5 Purchase Approval Process
 
 <Image 
   src="/assets/accounting/pending-purchase.svg"
@@ -175,7 +221,7 @@ If the order total on the PO is different from the actual order amount, user mus
 :::
 
 
-### 6.3.6 Creating a Linked Shipment
+### 6.4.6 Creating a Linked Shipment
 
 When user clicks the [+Shipment] button, a Linked Shipment form appears.
 

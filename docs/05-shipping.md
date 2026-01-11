@@ -57,21 +57,6 @@ As far as PPS and the ERP and are concerned, there are 5 statuses for shipments.
 |![Received](/assets/shipping/status-button-received.svg)|Shipments that have been received and checked by a PPS member|
 |![Delayed](/assets/shipping/status-button-delayed.svg)|Shipments that are stuck in clearance (API)|
 
-### 5.2.2 Shipment Category
-
-There are 4 main categories of shipments
-
-| Category | Description |
-|----------|-------------|
-|**Purchase**   |All PPS related purchases|
-|**Intra PPS**|Shipments from one PPS location to another (i.e. LA > UK)|
-|**Customer**|Completed orders shipped out to customers|
-|**RMA**|Authorized return shipments|
-
-- All **Purchase** shipments are Incoming (Vendor > PPS)  
-- All **Customer** shipments are Outgoing. (PPS > Customer)
-
-
 
 
 #### FedEx API
@@ -94,6 +79,25 @@ The Link text is bold, and clicking it opens up a new tab with the URL
 ![Shipment Table Row](/assets/shipping/shipment-table-row.svg)
 
 :::
+
+### 5.2.2 Shipment Category
+
+There are 4 main categories of shipments
+
+| Category | Description |
+|----------|-------------|
+|**Purchase**   |All PPS related purchases|
+|**Intra PPS**|Shipments from one PPS location to another (i.e. LA > UK)|
+|**Customer**|Completed orders shipped out to customers|
+|**RMA**|Authorized return shipments|
+
+- All **Purchase** shipments are Incoming (Vendor > PPS)  
+- All **Customer** shipments are Outgoing. (PPS > Customer)
+
+
+
+
+
 
 
 ### 5.2.3 Location Filter
@@ -401,29 +405,139 @@ For all other shipments, the shipment status will stay as **In Transit** until i
   caption="Delivered Shipment (Edit Mode)"
 />
 
-### 5.4.2 Tabs
+### 5.4.2 Billing
 
-#### Billing
 
-Billing information for the shipping costs. 
-Should be in Project Details
+This tab shows the shipping cost as well as the billing party for the shipment.  
+The information is populated after FedEx Invoice CSV has been imported into the ERP.
 
-#### Order
+<Image 
+  src="/assets/shipping/shipment-tab-billing.svg"
+  alt="Billing Tab"
+  caption="Billing Tab"
+/>
 
-Only for Linked Purchased Shipments.
+### 5.4.2.1 FedEx Invoice List
 
-#### Log
+Here you can view all the FedEx Invoices that have been uploaded into the system
 
-Shows all status updates, edits, and courier API updates.
+<Image 
+  src="/assets/shipping/fedex-invoice-list.svg"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
 
-## 5.5 Linked Shipments
+### 5.4.2.2 FedEx Invoice Detail
 
-Shipments created from other objects in the system will pull relevant information so that the data is linked.
+Clicking on the row opens up the FedEx Invoice Detail
 
-For example, you can create a shipment from an approved [Purchase Request](accounting#632-creating-a-linked-shipment).
+<Image 
+  src="/assets/shipping/fedex-invoice-detail.svg"
+  alt="FedEx Invoice Detail"
+  caption="FedEx Invoice Detail"
+/>
 
-You can also create a shipment from: 
+Here you can see all the shipments that are attached to the invoice, as well as other details like Invoice status and date.
 
-- [Production Batch](#41) 
-- [Project](#2-projects)
-- [RMA](#2)
+In order to upload FedEx Invoices, you must first get the invoice data.
+
+### 5.4.2.3 Download Invoices From FedEx.com
+
+You can download the CSV invoice data from the FedEx website.
+
+1. Log In at FedEx.com and Go to Billing > Invoices
+
+<Image 
+  src="/assets/shipping/fedex-invoice-01.png"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
+
+2. Select new invoices by clicking the checkboxes
+3. Click "DOWNLOAD"
+
+<Image 
+  src="/assets/shipping/fedex-invoice-02.png"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
+
+4. Select
+- File type: Csv
+- Column set: All columns
+
+5. Click "CREATE DOWNLOAD"
+
+<Image 
+  src="/assets/shipping/fedex-invoice-03.png"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
+
+6. Go to Download Center
+7. Download CSV files
+
+<Image 
+  src="/assets/shipping/fedex-invoice-04.png"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
+
+### 5.4.2.4 Upload Invoices to ERP
+
+Click the Upload button on the FedEx Invoices List to upload the csv file.
+
+<Image 
+  src="/assets/shipping/fedex-invoice-header.svg"
+  alt="FedEx Invoice List"
+  caption="FedEx Invoice List"
+/>
+
+### 5.4.2.5 FedEx Invoice CSV Format
+
+The following column data need to be added to the corresponding shipment detail using the tracking number from **Column J**.
+
+Each FedEx Invoice is also created and added to the list
+- A FedEx invoice may contain multiple shipments
+- A FedEx shipment may be added to multiple invoices
+
+|Column|Data||    
+|-|-----------------------------|-|   
+|C|Invoice Date                 |Invoice Data|
+|D|Invoice Number               |Invoice Data|
+|F|Original Amount Due          |Invoice Data|
+|G|Current Balance              |Invoice Data|
+|**J**|**Express or Ground Tracking ID**|Shipment Data|
+|L|Net Charge                   |Shipment Data|
+|M|Service Type                 |Shipment Data|
+|BY|Customs Value               |Shipment Data|
+
+
+
+
+### 5.4.3 Order
+
+Only for Linked Shipments that are created from [Purchases](accounting#64-purchasing).  
+
+[How to Create a Linked Shipment from Purchase](accounting#632-creating-a-linked-shipment)
+
+<Image 
+  src="/assets/shipping/shipment-tab-order.svg"
+  alt="Order Tab"
+  caption="Order Tab"
+/>
+
+1. **Purchase Order** - Link button that takes you to the PO
+1. **Vendor Order #** - Fetched from Linked Purchase
+1. **Order Total** - Fetched from Linked Purchase
+
+
+### 5.4.4 Log
+
+A record log of all status updates, edits, and courier API updates.
+
+<Image 
+  src="/assets/shipping/shipment-tab-log.svg"
+  alt="Log Tab"
+  caption="Log Tab"
+/>

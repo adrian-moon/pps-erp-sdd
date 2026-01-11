@@ -9,18 +9,29 @@ import Image from '@site/src/components/Image';
 
 ## 4.1 Overview
 
-All manufactured sensor units are serialized. 
-
-Sensors in the following categories are manufactured by PPS VN:
+The following are manufactured by PPS VN:
 
 | Category |
 |----------|
-|CTA/CHTA/ITA/HTA|
+|Sensors|
 |TactileGlove|
 |FingerTPS|
 |SureTouch|
 
-Sensors in the following categories are manufactured by PPS KR:
+- 5420
+- 6383
+- 5474
+- 6425
+- 8054
+- 8055
+- 5420
+- 8162
+- 8317
+- 8318
+- 5218
+
+
+The following are manufactured by PPS KR:
 
 | Category |
 |----------|
