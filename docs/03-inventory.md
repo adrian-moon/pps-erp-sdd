@@ -32,6 +32,10 @@ Every new item that requires inventory management is assigned a unique PN and ad
 Currently there is one single PN for sensors, electrodes, and each sensor specification.  
 All PN numbers requiring separation will have their part numbers updated by being assigned a unique suffix.
 
+
+---
+
+
 ## 3.2 Inventory List
 
 <Image 
@@ -42,11 +46,7 @@ All PN numbers requiring separation will have their part numbers updated by bein
 
 ### 3.2.1 Search
 
-<Image 
-  src="/assets/inventory/inventory-list-header.svg"
-  alt="Inventory List"
-  caption=""
-/>
+
 
 Users may search for:
 
@@ -101,12 +101,12 @@ There are custom manufactured items such as skins, but are not systems or electr
 
 Users may use the Category Filter Dropdown to select any category and/or sub-category to show.
 
-
 <Image 
   src="/assets/inventory/inventory-list-category-filter-open.svg"
   alt="Inventory List"
   caption=""
 />
+
 
 1. Checking/unchecking the main category selects all sub-categories within that group
 1. When multiple random selections are made, show the number of selections
@@ -118,15 +118,9 @@ Users may use the Category Filter Dropdown to select any category and/or sub-cat
 
 :::
 
-### 3.2.3 Filter
 
-<Image 
-  src="/assets/inventory/inventory-filter.svg"
-  alt="Inventory Filter"
-  caption=""
-/>
 
-#### Item Status
+### 3.2.3 Item Status
 
 | Status | Description |
 |----------|-------------|
@@ -134,7 +128,11 @@ Users may use the Category Filter Dropdown to select any category and/or sub-cat
 |Inactive |Obsolete or archived items|
 |Low Stock|Automatically updates when qty is below the threshold (See Item Detail)|
 
-#### Location
+### 3.2.4 Low Stock
+
+The Low Stock Filter 
+
+### 3.2.5 Location Filter
 
 The location filter shows only items with at least a qty of 1+ for that location.  
 It also hides unselected locations from the inventory list.
@@ -145,18 +143,14 @@ It also hides unselected locations from the inventory list.
   caption="Location Filter set to LA"
 />
 
-### 3.2.4 Tags
+### 3.2.6 Tags
 Tags are global groups for various categorizations and multiple tags can be assigned to a single item.  
 This tag is different from Category: Product / TactileGlove)
-
-
-
 
 :::note
 
     Why we need tags: a TactileGlove system contains many different items and accessories. TactileGlove products (the actual gloves), plus modules, accessories…etc. Each of these items are set to their own category/sub-category. But need to be grouped together under a “TactileGlove” tag.
 :::
-
 
 |Tags|
 |----|
@@ -169,9 +163,7 @@ This tag is different from Category: Product / TactileGlove)
 |Heeluxe|
 
 
-
-
-### 3.2.5 Filter Views and Groups
+### 3.2.7 Filter Views and Groups
 
 There are 2 separate features
 
@@ -192,16 +184,15 @@ This Custom Group (VN Office Supplies) is shared by the Vietnam team.
 They can add non-essential items as a Custom Item to simply track quantity.
 
 
-### 3.2.6 Adjust Stock Quantity
+### 3.2.8 Adjust Stock Quantity
 
 When you hover over an item row, the stock adjust control buttons appear.
 
 <Image 
-  src="/assets/inventory/stock-control-01.png"
+  src="/assets/inventory/inventory-list-hover.svg"
   alt="Stock Control"
   caption="Stock Control Menu appears when hovering over Item Row"
 />
-
 
 There are 3 different buttons:
 
@@ -209,16 +200,16 @@ There are 3 different buttons:
 - **(-) remove** remove quantity
 - **(=) set** set quantity (if you enter 12, the qty is set to 12)
 
-When you click, the pop up window opens and users can set the:
-
-- Location
-- Qty
-- Reason
-- Notes
+When you click, the pop up window opens
 
 ![Adjust Stock](/assets/inventory/stock-control-window.svg)
 
+:::note
 **Location, Quantity,** and **Reason** are required.
+:::
+
+---
+
 
 ## 3.3 Create New Item
 User can create a new item by clicking the [+Add] Button on the **Inventory List**.
@@ -262,6 +253,8 @@ When user creates a new item and **Sensor** is selected for the Category, the ch
 
 If you need to create additional subparts for existing PNs, you may do so in the particular PN item detail view (see below)
 
+
+---
 
 
 ## 3.4 Item Detail View

@@ -380,7 +380,7 @@ In order to make changes to the information, the user needs to enter **Edit Mode
   caption="Shipment Detail"
 />
 
-### 5.4.1.1 Sending Shipments
+### 5.4.2 Sending Shipments
 
 If the shipment is **Pending**, the **Edit Mode** enables the Send button.
 
@@ -393,7 +393,7 @@ If the shipment is **Pending**, the **Edit Mode** enables the Send button.
 Once the shipment is sent, it alerts the user and notifications are sent out to the relevant users.
 
 
-### 5.4.1.2 Receiving Shipments
+### 5.4.3 Receiving Shipments
 
 For FedEx and DHL shipments, the shipment status will update to **Delivered** once the API updates.
 
@@ -405,10 +405,10 @@ For all other shipments, the shipment status will stay as **In Transit** until i
   caption="Delivered Shipment (Edit Mode)"
 />
 
-### 5.4.2 Billing
+## 5.5 Billing
 
 
-This tab shows the shipping cost as well as the billing party for the shipment.  
+The Billing tab shows the shipping cost as well as the billing party for the shipment.  
 The information is populated after FedEx Invoice CSV has been imported into the ERP.
 
 <Image 
@@ -417,7 +417,7 @@ The information is populated after FedEx Invoice CSV has been imported into the 
   caption="Billing Tab"
 />
 
-### 5.4.2.1 FedEx Invoice List
+### 5.5.1 FedEx Invoice List
 
 Here you can view all the FedEx Invoices that have been uploaded into the system
 
@@ -427,7 +427,7 @@ Here you can view all the FedEx Invoices that have been uploaded into the system
   caption="FedEx Invoice List"
 />
 
-### 5.4.2.2 FedEx Invoice Detail
+### 5.5.2 FedEx Invoice Detail
 
 Clicking on the row opens up the FedEx Invoice Detail
 
@@ -441,7 +441,7 @@ Here you can see all the shipments that are attached to the invoice, as well as 
 
 In order to upload FedEx Invoices, you must first get the invoice data.
 
-### 5.4.2.3 Download Invoices From FedEx.com
+### 5.5.3 Download Invoices From FedEx.com
 
 You can download the CSV invoice data from the FedEx website.
 
@@ -483,7 +483,7 @@ You can download the CSV invoice data from the FedEx website.
   caption="FedEx Invoice List"
 />
 
-### 5.4.2.4 Upload Invoices to ERP
+### 5.5.4 Upload Invoices to ERP
 
 Click the Upload button on the FedEx Invoices List to upload the csv file.
 
@@ -493,7 +493,7 @@ Click the Upload button on the FedEx Invoices List to upload the csv file.
   caption="FedEx Invoice List"
 />
 
-### 5.4.2.5 FedEx Invoice CSV Format
+### 5.5.5 FedEx Invoice CSV Format
 
 The following column data need to be added to the corresponding shipment detail using the tracking number from **Column J**.
 
@@ -515,7 +515,7 @@ Each FedEx Invoice is also created and added to the list
 
 
 
-### 5.4.3 Order
+## 5.6 Order
 
 Only for Linked Shipments that are created from [Purchases](accounting#64-purchasing).  
 
@@ -532,7 +532,7 @@ Only for Linked Shipments that are created from [Purchases](accounting#64-purcha
 1. **Order Total** - Fetched from Linked Purchase
 
 
-### 5.4.4 Log
+## 5.7 Log
 
 A record log of all status updates, edits, and courier API updates.
 
