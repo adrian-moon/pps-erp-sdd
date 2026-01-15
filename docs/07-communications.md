@@ -24,9 +24,16 @@ You can also create new chats and edit them.
   caption="Inbox"
 />
 
-The left sidebar has a [+ New Chat] button at the very top.
+- The left sidebar has a [+ New Chat] button at the very top.
+- Home (current)
+- Mention (Comments)
+- Starred (Messages)
 
-### 7.1.2.1 New Chat
+#### Chats
+
+There are **Direct Messages** which are 1:1 conversations and **Group Chats** which are for 3 or more people.
+
+### 7.1.3 New Chat
 
 To create a new chat, press the [+ New Chat] button.
 
@@ -36,7 +43,7 @@ The New Chat window pops up.
 - Choose member(s)
 - Create and Send Message
  
-### 7.1.3 Direct Message
+### 7.1.3 Chat Window
 
 When you click the conversation from the list, the chat window for that conversation appears from the right.
 
@@ -48,15 +55,13 @@ When you click the conversation from the list, the chat window for that conversa
 
 Here you can continue the conversation, by using the textbox at the bottom.
 
-You may also pin the conversation or mute notifications.
+You may also pin the conversation.
 
 #### Message Box
 
-You can enter a new message or reply to an existing comment.
-
-You can upload a file
-
-You can link ERP objects
+- You can enter a new message or reply to an existing comment.
+- You can upload a file
+- You can link ERP objects (see below 7.1.4)
 
 ### 7.1.4 Object Links
 
@@ -77,11 +82,9 @@ List of Objects that can be linked
 - RMA
 
 
-### 7.1.4 Group Chat
-
-Same as Direct Message, but you can add multiple members.
 
 ---
+
 
 ## 7.2 Comments
 
